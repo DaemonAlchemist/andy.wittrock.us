@@ -1,0 +1,1 @@
+export {PageComponent as Page} from './Page.component';
