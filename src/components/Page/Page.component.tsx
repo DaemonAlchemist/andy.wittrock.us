@@ -14,8 +14,9 @@ export const PageComponent = (props:IPage) =>
             </Col>
         </Row>
         <Row>
-            <Col style={{textAlign: "right"}}>
-                {props.date}
+            <Col style={{textAlign: "right", fontStyle: "italic", marginBottom: "48px"}}>
+                Published {props.published}
+                {!!props.updated && <>, last edited {props.updated}</>}
             </Col>
         </Row>
     </>;

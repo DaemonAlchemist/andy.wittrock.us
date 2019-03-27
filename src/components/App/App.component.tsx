@@ -12,7 +12,7 @@ const config ={
 export const App = () => 
   <ReduxContainer reducers={{}}>
     <Layout style={{maxWidth: config.siteWidth, margin: "auto", position: "relative"}}>
-      <Layout.Header style={{position: "fixed", top: 0, width: "100%", maxWidth: config.siteWidth}}>
+      <Layout.Header style={{position: "fixed", top: 0, width: "100%", maxWidth: config.siteWidth, zIndex: 999}}>
         <Menu theme="dark" mode="horizontal">
           <Menu.Item>andy.wittrock.us</Menu.Item>
           <Menu.Item>Front End</Menu.Item>

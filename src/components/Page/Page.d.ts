@@ -1,6 +1,7 @@
 interface IPage {
     title:string;
-    date:string;
+    published:string;
+    updated?:string;
     children?:any;
 }
 
