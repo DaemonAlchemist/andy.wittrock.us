@@ -1,1 +1,1 @@
-export {TestPageComponent as TestPage} from './TestPage.component';
+export { TestPageComponent as TestPage } from './TestPage.component';
