@@ -1,4 +1,4 @@
-interface IPage {
+interface IPageProps {
     title:string;
     published:string;
     updated?:string;

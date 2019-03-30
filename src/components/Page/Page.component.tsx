@@ -1,7 +1,7 @@
 import { Col, Row } from 'antd';
 import * as React from 'react';
 
-export const PageComponent = (props:IPage) =>
+export const PageComponent = (props:IPageProps) =>
     <>
         <Row>
             <Col>
