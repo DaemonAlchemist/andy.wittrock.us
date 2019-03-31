@@ -21,8 +21,10 @@ export const PageComponent = (props:IPageProps) =>
                 <br />
                 {!!props.tags && 
                     <>
-                        Tags: {props.tags.map((tag:Tag) => 
-                            <Link key={tag} to={`/tags/${tag}`}>{tag}</Link>
+                        Tags: {props.tags.map((tag:Tag, index:number) =>
+                            <>
+                                {index > 0 && <>, </>}<Link key={tag} to={`/tags/${tag}`}>{tag}</Link>
+                            </>
                         )}
                     </>
                 }
