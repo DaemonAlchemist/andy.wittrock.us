@@ -11,6 +11,7 @@ export const config:IConfig = {
     ],
     site: {
         source: "https://github.com/DaemonAlchemist/andy.wittrock.us",
+        tagLine: "andy.wittrock.us",
         title: "Andrew Wittrock",
         width: "1000px",
     },

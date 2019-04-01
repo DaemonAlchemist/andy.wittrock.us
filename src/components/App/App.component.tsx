@@ -23,7 +23,7 @@ export const App = () =>
       <Layout style={{maxWidth: config.site.width, margin: "auto", position: "relative"}}>
         <Layout.Header style={{position: "fixed", top: 0, width: "100%", maxWidth: config.site.width, zIndex: 999}}>
           <Menu theme="dark" mode="horizontal">
-            <Menu.Item onClick={goTo('/')}>andy.wittrock.us</Menu.Item>
+            <Menu.Item onClick={goTo('/')}>{config.site.tagLine}</Menu.Item>
             {config.menu.tags.map((tag:Tag) => 
               <Menu.Item key={tag} onClick={goTo(`/tags/${tag}`)}>{tag}</Menu.Item>
             )}

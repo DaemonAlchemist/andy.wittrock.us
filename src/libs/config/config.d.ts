@@ -6,6 +6,7 @@ interface IPage {
 
 interface IConfig {
     site: {
+        tagLine: string;
         title: string;
         width: string;
         source: string;
