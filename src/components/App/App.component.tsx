@@ -5,17 +5,10 @@ import DocumentTitle from 'react-document-title';
 import { Route } from 'react-router';
 import { Router } from 'react-router-dom';
 import { config } from "../../libs/config";
+import { MenuLink } from "../MenuLink";
 import './App.css';
 
 const history = createBrowserHistory();
-
-const goTo = (url:string) => () => {
-  history.push(url);
-};
-
-const redirectTo = (url:string) => () => {
-  location.href = url;
-};
 
 export const App = () => 
   <DocumentTitle title={config.site.title}>
@@ -23,11 +16,11 @@ export const App = () =>
       <Layout style={{maxWidth: config.site.width, margin: "auto", position: "relative"}}>
         <Layout.Header style={{position: "fixed", top: 0, width: "100%", maxWidth: config.site.width, zIndex: 999}}>
           <Menu theme="dark" mode="horizontal">
-            <Menu.Item onClick={goTo('/')}>{config.site.tagLine}</Menu.Item>
+            <MenuLink to={'/'}>{config.site.tagLine}</MenuLink>
             {config.menu.tags.map((tag:Tag) => 
-              <Menu.Item key={tag} onClick={goTo(`/tags/${tag}`)}>{tag}</Menu.Item>
+              <MenuLink key={tag} to={`/tags/${tag}`}>{tag}</MenuLink>
             )}
-            <Menu.Item onClick={goTo('/resume')} style={{float: "right"}}>Résumé</Menu.Item>
+            <MenuLink to={'/resume'} style={{float: "right"}}>Résumé</MenuLink>
           </Menu>
         </Layout.Header>
         <Layout.Content style={{marginTop: "46px", padding: "8px"}}>
@@ -37,9 +30,9 @@ export const App = () =>
         </Layout.Content>
         <Layout.Header style={{position: "fixed", bottom: 0, width: "100%", maxWidth: config.site.width}}>
           <Menu theme="dark" mode="horizontal">
-            <Menu.Item onClick={redirectTo(config.site.source)} style={{float: "right"}}>
+            <MenuLink raw to={config.site.source} style={{float: "right"}}>
               &lt;source&gt;
-            </Menu.Item>
+            </MenuLink>
           </Menu>
         </Layout.Header>
       </Layout>
