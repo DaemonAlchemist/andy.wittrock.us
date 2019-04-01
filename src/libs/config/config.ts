@@ -10,6 +10,7 @@ export const config:IConfig = {
         {url: "/test-page", component: TestPage}
     ],
     site: {
+        source: "https://github.com/DaemonAlchemist/andy.wittrock.us",
         title: "Andrew Wittrock",
         width: "1000px",
     },

@@ -8,6 +8,7 @@ interface IConfig {
     site: {
         title: string;
         width: string;
+        source: string;
     };
     menu: {
         tags: Tag[];

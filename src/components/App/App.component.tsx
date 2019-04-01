@@ -37,7 +37,7 @@ export const App = () =>
         </Layout.Content>
         <Layout.Header style={{position: "fixed", bottom: 0, width: "100%", maxWidth: config.site.width}}>
           <Menu theme="dark" mode="horizontal">
-            <Menu.Item onClick={redirectTo('https://github.com/DaemonAlchemist/andy.wittrock.us')} style={{float: "right"}}>
+            <Menu.Item onClick={redirectTo(config.site.source)} style={{float: "right"}}>
               &lt;source&gt;
             </Menu.Item>
           </Menu>
