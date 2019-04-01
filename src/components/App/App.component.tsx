@@ -24,11 +24,9 @@ export const App = () =>
         <Layout.Header style={{position: "fixed", top: 0, width: "100%", maxWidth: config.site.width, zIndex: 999}}>
           <Menu theme="dark" mode="horizontal">
             <Menu.Item onClick={goTo('/')}>andy.wittrock.us</Menu.Item>
-            <Menu.Item onClick={goTo('/tags/Front End')}>Front End</Menu.Item>
-            <Menu.Item onClick={goTo('/tags/3D Graphics')}>3D Graphics</Menu.Item>
-            <Menu.Item onClick={goTo('/tags/Algorithms')}>Algorithms</Menu.Item>
-            <Menu.Item onClick={goTo('/tags/Procedural Content')}>Procedural Content</Menu.Item>
-            <Menu.Item onClick={goTo('/tags/Utilities')}>Utilities</Menu.Item>
+            {config.menu.tags.map((tag:Tag) => 
+              <Menu.Item key={tag} onClick={goTo(`/tags/${tag}`)}>{tag}</Menu.Item>
+            )}
             <Menu.Item onClick={goTo('/resume')} style={{float: "right"}}>Résumé</Menu.Item>
           </Menu>
         </Layout.Header>

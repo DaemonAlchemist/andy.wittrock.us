@@ -9,5 +9,8 @@ interface IConfig {
         title: string;
         width: string;
     };
+    menu: {
+        tags: Tag[];
+    }
     pages:IPage[];
 }
