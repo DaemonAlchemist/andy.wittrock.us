@@ -7,7 +7,16 @@ export const config:IConfig = {
         tags: ["Front End", "3D Graphics", "Algorithms", "Procedural Content", "Utilities"]
     },
     pages: [
-        {url: "/test-page", component: TestPage}
+        {
+            Component: TestPage,
+            page: {
+                published: "2019-01-03",
+                tags: ["Front End", "Algorithms"],
+                title: "Test Page",
+                updated: "2019-01-23",            
+            },
+            url: "/test-page",
+        }
     ],
     site: {
         source: "https://github.com/DaemonAlchemist/andy.wittrock.us",

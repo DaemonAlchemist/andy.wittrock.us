@@ -6,9 +6,15 @@ import { Route } from 'react-router';
 import { Router } from 'react-router-dom';
 import { config } from "../../libs/config";
 import { MenuLink } from "../MenuLink";
+import { Page } from "../Page";
 import './App.css';
 
 const history = createBrowserHistory();
+
+const fullPage = (page:IPage) => () =>
+  <Page {...page.page}>
+    <page.Component />
+  </Page>;
 
 export const App = () => 
   <DocumentTitle title={config.site.title}>
@@ -25,7 +31,7 @@ export const App = () =>
         </Layout.Header>
         <Layout.Content style={{marginTop: "46px", padding: "8px"}}>
           {config.pages.map((page:IPage) =>
-            <Route key={page.url} path={page.url} component={page.component} />
+            <Route key={page.url} path={page.url} component={fullPage(page)} />
           )}
         </Layout.Content>
         <Layout.Header style={{position: "fixed", bottom: 0, width: "100%", maxWidth: config.site.width}}>

@@ -1,7 +1,8 @@
 
 interface IPage {
     url:string;
-    component:React.StatelessComponent;
+    page: IPageProps;
+    Component:React.StatelessComponent;
 }
 
 interface IConfig {
