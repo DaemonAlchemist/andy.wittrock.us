@@ -12,7 +12,7 @@ import './App.css';
 const history = createBrowserHistory();
 
 const fullPage = (page:IPage) => () =>
-  <Page {...page.page}>
+  <Page {...page}>
     <page.Component />
   </Page>;
 

@@ -1,7 +1,6 @@
 
-interface IPage {
+interface IPage extends IPageProps {
     url:string;
-    page: IPageProps;
     Component:React.StatelessComponent;
 }
 
