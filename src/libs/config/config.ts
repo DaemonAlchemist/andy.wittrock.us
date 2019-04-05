@@ -7,6 +7,7 @@ export const config:IConfig = {
         tags: ["Front End", "3D Graphics", "Algorithms", "Procedural Content", "Utilities"]
     },
     pages: [
+        // HYGEN_PAGE_INJECT
         testPage,
     ],
     site: {
