@@ -1,5 +1,6 @@
 ///<reference path="./config.d.ts" />
 
+import {resume} from '../../components/Pages/Resume';
 import { testPage } from '../../components/Pages/TestPage';
 
 export const config:IConfig = {
@@ -8,6 +9,7 @@ export const config:IConfig = {
     },
     pages: [
         // HYGEN_PAGE_INJECT
+        resume,
         testPage,
     ],
     site: {
