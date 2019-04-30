@@ -1,0 +1,5 @@
+@media(max-width: 640px) {
+    div.image {
+        width: calc(100% - 1em - 2px) !important;
+    }
+}

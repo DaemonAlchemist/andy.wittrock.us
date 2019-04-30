@@ -1,0 +1,20 @@
+.header {
+    position: fixed;
+    left: calc(50% + 25em);
+    top: 0;
+    width: 150px;
+    list-style-type: none;
+    padding: 16px;
+    margin-top: 8px;
+    border: solid 2px #fff;
+}
+
+@media (max-width: calc(50em + (150px + 32px + 19px) * 2)) {
+    .header{
+        left: auto;
+        right: 8px;
+        border-color: #555;
+        background: #fff;
+        z-index: 999;
+    }
+}

@@ -2,7 +2,7 @@ import * as React from 'react';
 import {Link} from 'react-router-dom';
 
 export const MenuLink = (props:IMenuLinkProps) =>
-    <li className="ant-menu-item" style={props.style}>
+    <li style={props.style}>
         {!props.raw
             ? <Link to={props.to}>
                 {React.Children.map(props.children, a=>a)}
