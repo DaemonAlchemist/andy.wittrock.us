@@ -6,6 +6,7 @@ interface IPage extends IPageProps {
 
 interface IConfig {
     site: {
+        author: string;
         tagLine: string;
         title: string;
         width: string;

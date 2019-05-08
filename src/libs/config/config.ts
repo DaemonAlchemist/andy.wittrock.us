@@ -13,6 +13,7 @@ export const config:IConfig = {
         testPage,
     ],
     site: {
+        author: "Andrew Wittrock",
         source: "https://github.com/DaemonAlchemist/andy.wittrock.us",
         tagLine: "andy.wittrock.us",
         title: "Andrew Wittrock",
