@@ -15,25 +15,22 @@ h1 {
     z-index: 999;
 }
 
-.topShadow {
-    content: "";
+.shadow {
     display: block;
     height: 10px;
     width: 100% !important;
     position: fixed;
-    top: 38px;
-    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.5);
     margin: 0 auto;
     max-width: 50em;
 }
 
-.stuck.bottom:before {
-    content: "";
-    display: block;
-    height: 10px;
-    width: 100% !important;
-    position: absolute;
-    top: 0;
+.top.shadow {
+    top: 38px;
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.5);
+}
+
+.bottom.shadow {
+    bottom: 38px;
     box-shadow: 0px -8px 8px rgba(0, 0, 0, 0.5);
 }
 

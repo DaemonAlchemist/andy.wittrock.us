@@ -1,0 +1,9 @@
+#footer {
+    text-align: center;
+    background: rgb(255, 255, 255) none repeat scroll 0% 0%;
+    position: absolute;
+    margin: 0 auto;
+    max-width: 50em;
+    width: 100%;
+    padding: 8px 0;
+}
