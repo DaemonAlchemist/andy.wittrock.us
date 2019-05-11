@@ -3,7 +3,7 @@ body {
     max-width: 50em;
     font-family: "Helvetica", "Arial", sans-serif;
     line-height: 1.5;
-    padding: 4em 1em;
+    padding: 1em 1em;
     color: #555;
 }
 
@@ -12,16 +12,19 @@ h1 {
     top: 0;
     background: #ffffff;
     border-bottom: solid 1px;
+    z-index: 999;
 }
 
-.stuck.top:after {
+.topShadow {
     content: "";
     display: block;
     height: 10px;
     width: 100% !important;
-    position: absolute;
-    bottom: 0;
+    position: fixed;
+    top: 38px;
     box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.5);
+    margin: 0 auto;
+    max-width: 50em;
 }
 
 .stuck.bottom:before {
