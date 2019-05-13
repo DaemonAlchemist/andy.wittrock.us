@@ -5,8 +5,8 @@ import { Route } from 'react-router';
 import { Router } from 'react-router-dom';
 import { config } from "../../libs/config";
 import { Footer } from "../Footer";
-import { Header } from "../Header";
 import { Page } from "../Page";
+import { Sidebar } from "../Sidebar";
 import './App.css';
 
 const history = createBrowserHistory();
@@ -20,7 +20,7 @@ export const App = () =>
   <DocumentTitle title={config.site.title}>
     <Router history={history}>
       <>
-        <Header />
+        <Sidebar />
         {config.pages.map((page:IPage) =>
           <Route key={page.url} path={page.url} component={fullPage(page)} />
         )}
