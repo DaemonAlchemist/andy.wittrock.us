@@ -9,7 +9,7 @@ export const resume:IPage = {
     Component: ResumeComponent,
     published: "2019-04-07",
     tags: [],
-    title: "Andrew Wittrock",
+    title: "Résumé",
     updated: "",            
     url: "/resume",
 };
