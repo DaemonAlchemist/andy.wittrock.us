@@ -10,7 +10,10 @@ const imageContainerStyle = (props:IImageProps):React.CSSProperties => ({
     marginRight: props.left ? "1em" : 0,
     padding: "8px",
     textAlign: "center",
-    width: `${props.left || props.right ? "50%" : "100%"}`,
+    width: `${props.left || props.right
+        ? (props.small ? "25%" : "50%")
+        : (props.small ? "50%" : "100%")
+    }`,
 });
 
 export const Image = (props:IImageProps) =>

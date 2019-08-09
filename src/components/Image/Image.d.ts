@@ -4,4 +4,5 @@ interface IImageProps {
     children?:any;
     left?:boolean;
     right?:boolean;
+    small?:boolean;
 }
