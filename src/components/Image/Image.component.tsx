@@ -3,13 +3,14 @@ import "./Image.css";
 
 const imageContainerStyle = (props:IImageProps):React.CSSProperties => ({
     border: "solid 1px",
+    boxSizing: "border-box",
     float: props.left ? "left" : props.right ? "right" : undefined,
     marginBottom: "8px",
     marginLeft: props.right ? "1em" : 0,
     marginRight: props.left ? "1em" : 0,
     padding: "8px",
     textAlign: "center",
-    width: `calc(${props.left || props.right ? "50%" : "100%"} - 18px)`,
+    width: `${props.left || props.right ? "50%" : "100%"}`,
 });
 
 export const Image = (props:IImageProps) =>
