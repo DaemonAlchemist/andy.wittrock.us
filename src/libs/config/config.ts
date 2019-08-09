@@ -1,6 +1,7 @@
 ///<reference path="./config.d.ts" />
 
 import { gravity } from '../../components/Pages/Gravity';
+import { minecraftToMaxPart2 } from '../../components/Pages/MinecraftToMaxPart_2';
 import { minecraftToMaxPart3 } from '../../components/Pages/MinecraftToMaxPart_3';
 import { prematureOptimization } from '../../components/Pages/PrematureOptimization';
 import { proceduralLandscapes } from '../../components/Pages/ProceduralLandscapes';
@@ -13,6 +14,7 @@ export const config:IConfig = {
     },
     pages: [
         // HYGEN_PAGE_INJECT
+        minecraftToMaxPart2,
         minecraftToMaxPart3,
         gravity,
         proceduralLandscapes,
