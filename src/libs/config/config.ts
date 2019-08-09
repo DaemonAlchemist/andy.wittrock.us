@@ -11,7 +11,7 @@ import { testPage } from '../../components/Pages/TestPage';
 
 export const config:IConfig = {
     menu: {
-        tags: ["Front End", "3D Graphics", "Algorithms", "Procedural Content", "Utilities"]
+        tags: ["Minecraft", "C++", "Front End", "3D Graphics", "Algorithms", "Procedural Content", "Utilities"]
     },
     pages: [
         // HYGEN_PAGE_INJECT

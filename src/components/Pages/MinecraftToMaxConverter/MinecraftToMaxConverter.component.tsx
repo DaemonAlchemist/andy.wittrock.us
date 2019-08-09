@@ -34,7 +34,7 @@ const MinecraftToMaxConverterComponent = () =>
 export const minecraftToMaxConverter:IPage = {
     Component: MinecraftToMaxConverterComponent,
     published: "2010-06-13",
-    tags: [],
+    tags: ["Minecraft", "3D Graphics", "C++"],
     title: "Minecraft to Max Converter",
     updated: "",            
     url: "/minecraft-to-max-converter",

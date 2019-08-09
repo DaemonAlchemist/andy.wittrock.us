@@ -41,7 +41,7 @@ const PrematureOptimizationComponent = () =>
 export const prematureOptimization:IPage = {
     Component: PrematureOptimizationComponent,
     published: "2014-06-26",
-    tags: ["3D Graphics", "Algorithms"],
+    tags: ["3D Graphics", "Algorithms", "C++"],
     title: "Premature Optimization",
     updated: "",
     url: "/premature-optimization",

@@ -32,7 +32,7 @@ const GravityComponent = () =>
 export const gravity:IPage = {
     Component: GravityComponent,
     published: "2014-04-13",
-    tags: [],
+    tags: ["Algorithms"],
     title: "Gravity",
     updated: "",            
     url: "/gravity",

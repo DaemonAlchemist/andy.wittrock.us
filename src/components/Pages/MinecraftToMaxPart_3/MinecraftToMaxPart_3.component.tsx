@@ -26,7 +26,7 @@ const MinecraftToMaxPart3Component = () =>
 export const minecraftToMaxPart3:IPage = {
     Component: MinecraftToMaxPart3Component,
     published: "2011-01-13",
-    tags: [],
+    tags: ["Minecraft", "3D Graphics", "C++"],
     title: "Minecraft to Max (Part 3)",
     updated: "",            
     url: "/minecraft-to-max-part-3",
