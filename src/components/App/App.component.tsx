@@ -22,7 +22,7 @@ export const App = () =>
       <>
         <Sidebar />
         {config.pages.map((page:IPage) =>
-          <Route key={page.url} path={page.url} component={fullPage(page)} />
+          <Route key={page.url} path={page.url} exact component={fullPage(page)} />
         )}
         <Footer />
       </>

@@ -1,6 +1,7 @@
 ///<reference path="./config.d.ts" />
 
 import { gravity } from '../../components/Pages/Gravity';
+import { homepage } from '../../components/Pages/Homepage';
 import { minecraftToMaxConverter } from '../../components/Pages/MinecraftToMaxConverter';
 import { minecraftToMaxPart2 } from '../../components/Pages/MinecraftToMaxPart_2';
 import { minecraftToMaxPart3 } from '../../components/Pages/MinecraftToMaxPart_3';
@@ -14,6 +15,7 @@ export const config:IConfig = {
     },
     pages: [
         // HYGEN_PAGE_INJECT
+        homepage,
         minecraftToMaxConverter,
         minecraftToMaxPart2,
         minecraftToMaxPart3,

@@ -6,5 +6,6 @@ interface IPageProps {
     title:string;
     updated?:string;
     children?:any;
+    preview?:number;
 }
 

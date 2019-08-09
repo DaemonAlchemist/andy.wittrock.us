@@ -5,7 +5,7 @@ export const PageComponent = (props:IPageProps) =>
     <>
         <h1 className="stuck top">{props.title}</h1>
         <div className="top shadow" />
-        {React.Children.map(props.children, a => a)}
+        {React.Children.map(props.preview ? props.children.slice(0, props.preview) : props.children, a => a)}
         <div style={{clear: "both"}} />
         <div className="stuck bottom" style={{position: "sticky", bottom: 0, borderTop: "solid 1px", background: "#ffffff", zIndex: 999}}>
             Published {props.published}
