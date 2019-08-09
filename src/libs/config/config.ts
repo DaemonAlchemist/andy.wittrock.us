@@ -1,5 +1,6 @@
 ///<reference path="./config.d.ts" />
 
+import {prematureOptimization} from '../../components/Pages/PrematureOptimization';
 import {resume} from '../../components/Pages/Resume';
 import { testPage } from '../../components/Pages/TestPage';
 
@@ -9,6 +10,7 @@ export const config:IConfig = {
     },
     pages: [
         // HYGEN_PAGE_INJECT
+        prematureOptimization,
         resume,
         testPage,
     ],

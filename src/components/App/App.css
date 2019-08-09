@@ -39,3 +39,10 @@ h2,
 strong {
   color: #333;
 }
+
+blockquote {
+    border: dashed 1px #aaa;
+    padding: 8px;
+    font-style: italic;
+    background: #eee;
+}
