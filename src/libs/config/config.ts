@@ -7,7 +7,6 @@ import { minecraftToMaxPart3 } from '../../components/Pages/MinecraftToMaxPart_3
 import { prematureOptimization } from '../../components/Pages/PrematureOptimization';
 import { proceduralLandscapes } from '../../components/Pages/ProceduralLandscapes';
 import { resume } from '../../components/Pages/Resume';
-import { testPage } from '../../components/Pages/TestPage';
 
 export const config:IConfig = {
     menu: {
@@ -22,7 +21,6 @@ export const config:IConfig = {
         proceduralLandscapes,
         prematureOptimization,
         resume,
-        testPage,
     ],
     site: {
         author: "Andrew Wittrock",
