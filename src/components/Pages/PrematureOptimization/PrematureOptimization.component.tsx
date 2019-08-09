@@ -43,6 +43,6 @@ export const prematureOptimization:IPage = {
     published: "2014-06-26",
     tags: ["3D Graphics", "Algorithms"],
     title: "Premature Optimization",
-    updated: "2014-06-26",            
+    updated: "",
     url: "/premature-optimization",
 };

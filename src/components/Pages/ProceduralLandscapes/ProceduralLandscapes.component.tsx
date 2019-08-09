@@ -32,6 +32,6 @@ export const proceduralLandscapes:IPage = {
     published: "2014-05-15",
     tags: [],
     title: "Procedural Landscapes",
-    updated: "2014-05-15",            
+    updated: "",
     url: "/procedural-landscapes",
 };

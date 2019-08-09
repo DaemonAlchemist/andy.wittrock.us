@@ -1,5 +1,6 @@
 ///<reference path="./config.d.ts" />
 
+import {gravity} from '../../components/Pages/Gravity';
 import { prematureOptimization } from '../../components/Pages/PrematureOptimization';
 import { proceduralLandscapes } from '../../components/Pages/ProceduralLandscapes';
 import { resume } from '../../components/Pages/Resume';
@@ -11,6 +12,7 @@ export const config:IConfig = {
     },
     pages: [
         // HYGEN_PAGE_INJECT
+        gravity,
         proceduralLandscapes,
         prematureOptimization,
         resume,
