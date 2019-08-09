@@ -1,3 +1,4 @@
+import { sortBy } from 'atp-pointfree';
 import * as React from 'react';
 import { config } from "../../libs/config";
 import { MenuLink } from '../MenuLink';
@@ -11,7 +12,7 @@ export const Sidebar = (props:ISidebarProps) =>
         </ul>
         <h2>Pages</h2>
         <ul>
-            {config.pages.map((page:IPage) =>
+            {config.pages.sort(sortBy("published")).reverse().map((page:IPage) =>
                 <MenuLink key={page.url} to={page.url}>
                     {page.title}
                 </MenuLink>

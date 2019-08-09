@@ -1,4 +1,3 @@
-import { MonthPickerProps } from "antd/lib/date-picker/interface";
 
 type Language = "C++" | "Javascript" | "C#";
 
