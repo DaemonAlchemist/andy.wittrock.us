@@ -23,7 +23,7 @@ const MinecraftToMaxPart2Component = (props:IPageComponentProps) =>
             
             <Grid columns={4}>
                 <Image src="/img/mc2max/front-door-day-150x150.png" />
-                <Image src="http://andy.wittrock.us/wp-content/uploads/2011/12/front-door-night-150x150.png" />
+                <Image src="/img/mc2max/front-door-night-150x150.png" />
                 <Image src="/img/mc2max/valley-day-150x150.png" />
                 <Image src="/img/mc2max/valley-night-150x150.png" />
                 <Image src="/img/mc2max/overlook-day-150x150.png" />
