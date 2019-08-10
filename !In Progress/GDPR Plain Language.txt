@@ -1,0 +1,133 @@
+GDPR Regulation Summary
+=======================
+Article 1: What this regulation is about?
+=========================================
+The GDPR regulation is meant to protect personal data for EU citizens.
+
+Article 2:  How broad is this regulation?
+=========================================
+This applies to anyone who processes user's personal data for commercial purposes.
+
+Article 3:  Where is this regulaton in force?
+=============================================
+This regulation applies to organizatons inside the EU.
+This regulation applies to organizations outside the EU if:
+	- The organization offers goods specifically to people in the EU, or
+	- The organization monitors the user's behavior.
+
+Article 4:  Definitions
+
+Article 5: What do I have to do?
+=================================
+You have to tell your users exactly what you'll do with their data.  You can't do anything else with it.
+Archiving data for research or statistical purposes are ok without additional consent.
+You can only collect data that is actually needed for what you told your users you'll do with it.
+You keep your users' data up to date, and correct errors as soon as reasonably possible.
+You can only keep data for as long as needed for what you told your users you'll do with it.
+You have to protect your users data.
+You have to be able to show that you're complying with the above.
+
+Article 6:  When is it ok to use a user's data?
+===============================================
+You can only use the user's data if:
+	- The user has explicitly told you that it's ok.  "Explicitly" means no pre-checked checkboxes, or "you consent by continuing to use this site,"
+	- You need the data to do something the user asked you to, like fill an order, or
+If you want to use the data for something else that the user has not consented to, you need to show that it's related enough to the initial purpose.
+
+Article 7:  Getting user consent
+================================
+If you get consent before using a user's data, you must be able to show that the user consented.
+Requests for consent to use a user's data must be written in clear language and not hidden in other text or consents.
+A user must be able to withdraw consent at any time, and withdrawing consent must be as easy as giving consent.
+You shouldn't require consent to use a site or service that doesn't require the use of the user's personal data.
+
+Article 8:  Consent for children
+================================
+Parents must give consent for children.
+By default, anyone under 16 is considered a child, but EU states are allowed to set the age as low as 13.
+You must make an effort to ensure that parents are giving consent if a user is a child.
+
+Articles 9 & 10:  Sensitive Data
+================================
+Do not process sensitive data from users (gender, race, politics, religion, etc.) unless the user has given consent or you have a really good reason.
+
+Article 11:  Impossible data requests
+=====================================
+If you don't retain data sufficient to identify a user when they make a request to get or delete their data, you don't have to comply unless the user provides additional data sufficient to identify their data.
+
+Article 12:  Transparency
+=========================
+Service data requests by your users in a timely manner, unless you do not have the ability to identify the user.  In any case, response to all requests in a timely manner.
+You have a month to respond and have to inform the user that they can file a complaint if you don't.
+Requests for information under Articles 13 and 14 must be free, unless the user is being a pain in the butt about it, in which case you can charge a fee, or refuse.
+Article 13 and 14 info may be provided with icons.
+
+...
+
+Article 13:  Personal data the user gives you themselves
+=================================================================
+When the user first visits your site, you have to tell them:
+	- Who you are and how to contact you and/or your representative.
+	- What you are doing with their data.
+	- Who you give their data to.
+	- How long you will store the data OR what criteria you use to determine which data to delete.
+	- Inform the user of their rights to:
+		- Access their data,
+		- Correct their data,
+		- Remove their data, and
+		- Restrict or object to the usage
+		- Withdraw consent (if applicable)
+		- Lodge a complaint
+	- Whether the user needs to provide their data to use your site.  If so, why is their data required.
+	- Whether there are automated profiling and decision making tools that process their data, as well as how they work and what will the profiles be used for.
+If you decide to use the user's data for something other than why it was collected, you have to tell them and also provide the previous info.
+You don't have to do any of this if the user already knows.
+
+Article 14:  Personal data about the user someone else gave you
+===============================================================
+When you get data about the user from someone else, you have to tell the user:
+	- Who you are and how to contact you and/or your representative.
+	- What you are doing with their data.
+	- What data you were given
+	- Who you give their data to.
+You have to tell the user within a month, or when you first use the data, whichever comes first.
+If you decide to use the user's data for something other than why it was collected, you have to tell them and also provide the previous info.
+You don't have to do any of this if the user already knows.
+
+Article 15:  Access rights
+==========================
+The user has the right to request whether their data is being used, and if so:
+	- For what purpose
+	- What data you have
+	- Who did you give the data to
+	- How long the data will be stored.
+	- Knowledge of their rights
+	- Where you got the information (if not from the user themselves)
+	- What automated processes are being used on their data
+	- What security is used while transferring the information.
+You have to provide this information for free the first time.  You may then charge a reasonable fee for more requests.
+
+Article 16:  The user will have the right to correct any data you have on them.
+
+Article 17:  Right to be forgotten
+==================================
+The user can request that you delete their data if you no longer need it, or they withdraw consent.  You may refuse if you need the data for legal reasons.
+
+Article 18:  Right to not be used
+==================================
+The user can request that you not process their data if you no longer need it, or it is inaccurate.  You may refuse if you need the data for legal reasons.
+You have to tell the user before you start using their data again.
+
+Article 19:  You have to inform your user(s) if you fix, delete, or restrict their data
+
+Article 20:  The user has the right to have an export of their data in a commonly used machine readable format.
+
+Article 21:  The user has the right to ask you to not use their information for direct marketing purposes.
+
+Article 22:  You can't make a decision that affects a user based solely on automated processing.
+
+Article 24 &25:  Protecting data
+================================
+You are responsible for protecting the user's data, and should be able to show that you are complying with this regulation.
+You should store and process data in a way that protects a user's identity.
+You should send only data that is needed for particular purposes.

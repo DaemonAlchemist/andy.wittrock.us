@@ -46,3 +46,7 @@ blockquote {
     font-style: italic;
     background: #eee;
 }
+
+a {
+    text-decoration: none;
+}

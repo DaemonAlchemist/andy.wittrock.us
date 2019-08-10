@@ -9,3 +9,6 @@ interface IPageProps {
     preview?:number;
 }
 
+interface IPageComponentProps {
+    preview?:boolean;
+}

@@ -1,0 +1,3 @@
+interface IDropCapProps {
+    preview?:boolean;
+}

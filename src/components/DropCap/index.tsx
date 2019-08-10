@@ -11,6 +11,6 @@ const dropCapStyle:React.CSSProperties = {
 };
 
 export const DropCap = (props:any) =>
-    <span style={dropCapStyle}>
+    <span style={props.preview ? undefined : dropCapStyle}>
         {React.Children.map(props.children, a=>a)}
     </span>
