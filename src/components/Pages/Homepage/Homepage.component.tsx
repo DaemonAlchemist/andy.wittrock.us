@@ -17,7 +17,7 @@ const HomepageComponent = () =>
                     <div style={{textAlign: "right"}}>
                         <Link to={page.url}>...read more</Link>
                     </div>
-                    <div style={{height: "64px"}} />
+                    <hr />
                 </div>
             )
         }
@@ -25,7 +25,7 @@ const HomepageComponent = () =>
 
 export const homepage:IPage = {
     Component: HomepageComponent,
-    published: "2009-01-01",
+    published: "",
     tags: [],
     title: "andy.wittrock.us",
     updated: "",            

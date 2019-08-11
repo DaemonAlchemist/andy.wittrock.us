@@ -8,10 +8,10 @@ export const PageComponent = (props:IPageProps) =>
         {React.Children.map(props.preview ? props.children.slice(0, props.preview) : props.children, a => a)}
         <div style={{clear: "both"}} />
         <div className="stuck bottom" style={{position: "sticky", bottom: 0, borderTop: "solid 1px", background: "#ffffff", zIndex: 999}}>
-            Published {props.published}
+            {!!props.published && <>Published {props.published}</>}
             {!!props.updated && <>, last edited {props.updated}</>}
             <br />
-            {!!props.tags && 
+            {!!props.tags.length && 
                 <>
                     Tags: {props.tags.map((tag:Tag, index:number) =>
                         <>
@@ -20,6 +20,7 @@ export const PageComponent = (props:IPageProps) =>
                     )}
                 </>
             }
+            {!props.tags.length && <br />}
         </div>
         <div className="bottom shadow" />
     </>;
