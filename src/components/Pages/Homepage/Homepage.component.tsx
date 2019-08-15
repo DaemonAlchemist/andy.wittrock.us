@@ -12,12 +12,16 @@ const HomepageComponent = () =>
             .map((page:IPage) => 
                 <div key={page.url}>
                     <h2><Link to={page.url}>{page.title}</Link></h2>
-                    <div><i>Published {page.published}</i></div>
                     <page.Component preview />
-                    <div style={{textAlign: "right"}}>
-                        <Link to={page.url}>...read more</Link>
+                    <div style={{display: "grid", gridTemplateColumns: "50% 50%"}}>
+                        <div>
+                            <i>Published {page.published}</i>
+                        </div>
+                        <div style={{textAlign: "right"}}>
+                            <Link to={page.url}>...continue reading</Link>
+                        </div>
                     </div>
-                    <hr />
+                    <hr style={{clear: "both"}}/>
                 </div>
             )
         }

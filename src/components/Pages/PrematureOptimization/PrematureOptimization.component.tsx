@@ -4,11 +4,11 @@ import { Quote } from "../../Quote";
 
 const PrematureOptimizationComponent = (props:IPageComponentProps) =>
     <>
+        <h2> Correct is Better than Fast</h2>
+
         <Quote author="Donald Knuth">
             &#8220;We should forget about small efficiencies, say about 97% of the time: premature optimization is the root of all evil&#8221;
         </Quote>
-
-        <h2> Correct &gt; Fast</h2>
 
         <p><DropCap preview={props.preview}>I</DropCap>'ve always tried to keep the above quote in mind when programming.  My first priority is to get my programs working correctly, and only then do I go back and try to make them more efficient, usually with the help of a good profiler.  Recently, the importance of profiling before optimizing was re-inforced in a big way.</p>
 
