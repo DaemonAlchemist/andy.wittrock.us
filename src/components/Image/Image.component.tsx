@@ -1,5 +1,5 @@
 import * as React from 'react';
-import "./Image.css";
+import "./Image.less";
 
 const imageContainerStyle = (props:IImageProps):React.CSSProperties => ({
     border: "solid 1px",

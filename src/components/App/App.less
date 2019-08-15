@@ -1,0 +1,108 @@
+@import "../../libs/vars.less";
+
+body {
+    margin: 0 auto;
+    max-width: @contentMaxWidth;
+    font-family: "Helvetica", "Arial", sans-serif;
+    line-height: 1.5;
+    padding: @padding;
+    color: @primary;
+    background: @secondary;
+}
+
+.page {
+    a {
+        color: @highlight;
+        &:visited {
+            color: @highlightLow;
+        }
+    }
+    h1 {
+        position: sticky;
+        top: 0;
+        background: @secondary;
+        border-bottom: solid 1px;
+        z-index: 999;
+        color: @primaryLow;
+    }
+
+    .shadow {
+        display: block;
+        height: 10px;
+        width: 100% !important;
+        position: fixed;
+        margin: 0 auto;
+        max-width: 50em;
+    }
+
+    .top.shadow {
+        top: 38px;
+        box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    .bottom.shadow {
+        bottom: 38px;
+        box-shadow: 0px -8px 8px rgba(0, 0, 0, 0.5);
+    }
+    .page-footer {
+        background: @secondary !important;
+    }
+
+    h1,
+    h2,
+    strong {
+        color: @primaryLow;
+    }
+
+    blockquote {
+        border: dashed 1px @primary;
+        padding: @paddingSmall;
+        font-style: italic;
+        background: @primaryHigh;
+        color: @secondaryLow;
+        }
+
+    a {
+        text-decoration: none;
+    }
+
+
+    hr {
+        overflow: visible; /* For IE */
+        padding: 0;
+        border: none;
+        border-top: medium double @primary;
+        color: @secondary;
+        text-align: center;
+        margin-top: @paddingBig;
+        margin-bottom: @padding;
+    }
+    hr:after {
+        content: "§";
+        display: inline-block;
+        position: relative;
+        top: -0.9em;
+        font-size: 1.5em;
+        color: @primary;
+        padding: 0;
+        background: transparent;
+        text-shadow:
+    -2px -2px 0 @secondary,  
+        2px -2px 0 @secondary,
+        -2px 2px 0 @secondary,
+        2px 2px 0 @secondary;
+    }
+}
+
+@media (max-width: calc(@contentMaxWidth + (@sidebarWidth + @padding * 2 + 20px) * 2)) {
+    body {
+        margin-left: @sidebarWidth + @padding * 2;
+    }
+}
+
+@media (max-width: calc(@contentMaxWidth + @sidebarWidth + @padding * 2)) {
+    body {
+        margin-left: @sidebarWidth + @padding * 2;
+        width: calc(100% - @sidebarWidth - @padding * 4);
+    }
+}

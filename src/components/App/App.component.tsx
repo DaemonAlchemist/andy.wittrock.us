@@ -7,7 +7,7 @@ import { config } from "../../libs/config";
 import { Footer } from "../Footer";
 import { Page } from "../Page";
 import { Sidebar } from "../Sidebar";
-import './App.css';
+import './App.less';
 
 const history = createBrowserHistory();
 

@@ -2,7 +2,7 @@ import { sortBy } from 'atp-pointfree';
 import * as React from 'react';
 import { config } from "../../libs/config";
 import { MenuLink } from '../MenuLink';
-import "./Sidebar.css";
+import "./Sidebar.less";
 
 export const Sidebar = (props:ISidebarProps) =>
     <div id="sidebar">

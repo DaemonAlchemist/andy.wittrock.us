@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
-import "./MenuLink.css";
+import "./MenuLink.less";
 
 export const MenuLink = (props:IMenuLinkProps) =>
     <li style={props.style}>

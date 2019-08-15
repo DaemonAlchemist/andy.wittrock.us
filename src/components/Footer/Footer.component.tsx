@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { config } from "../../libs/config";
-import "./Footer.css";
+import "./Footer.less";
 
 export const Footer = (props:IFooterProps) =>
     <div id="footer">
