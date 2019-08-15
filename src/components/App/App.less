@@ -29,7 +29,7 @@ body {
     .shadow {
         display: block;
         height: 10px;
-        width: 100% !important;
+        width: 100%;
         position: fixed;
         margin: 0 auto;
         max-width: 50em;
@@ -104,6 +104,11 @@ body {
     body {
         margin-left: @sidebarWidth + @padding * 2;
         width: calc(100% - @sidebarWidth - @padding * 4);
+        .page {
+            .shadow {
+                width: calc(100% - @sidebarWidth - @padding * 4);
+            }
+        }
     }
 }
 
@@ -112,5 +117,10 @@ body {
         margin: @padding;
         padding: 0;
         width: calc(100% - @padding * 2);
+        .page {
+            .shadow {
+                width: calc(100% - @padding * 2);
+            }
+        }
     }
 }
