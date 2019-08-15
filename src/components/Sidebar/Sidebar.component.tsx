@@ -4,8 +4,15 @@ import { config } from "../../libs/config";
 import { MenuLink } from '../MenuLink';
 import "./Sidebar.less";
 
-export const Sidebar = (props:ISidebarProps) =>
-    <div id="sidebar">
+export const Sidebar = (props:ISidebarProps) => {
+    const [expanded, setExpanded] = React.useState(false);
+    const expand = (ex:boolean) => (e:any) => {
+        e.stopPropagation();
+        setExpanded(ex);
+    }
+
+    return <div id="sidebar" className={expanded ? "expanded" : undefined} onClick={expand(false)} >
+        <div id="handle"><div onClick={expand(true)}/></div>
         <h2>Links</h2>
         <ul>
             <MenuLink to="/">{config.site.tagLine}</MenuLink>
@@ -27,3 +34,4 @@ export const Sidebar = (props:ISidebarProps) =>
             )}
         </ul>
     </div>;
+}

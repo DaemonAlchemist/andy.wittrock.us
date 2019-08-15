@@ -33,11 +33,50 @@
             }
         }
     }
+    #handle {
+        display: none;
+    }
 }
 
 
 @media (max-width: calc(@contentMinWidth + @sidebarWidth + @padding * 2)) {
     #sidebar{
-        display: none;
+        width: calc(100% - @padding * 2);
+        left: -100%;
+        margin: 0;
+        padding: @padding;
+        z-index: 9999;
+        transition: left 250ms;
+
+        &.expanded {
+            left: 0;
+        }
+
+        #handle {
+            display: block;
+            width: 100%;
+            height: 0;
+            position: relative;
+            background: transparent;
+            div {
+                width: @paddingBig;
+                height: @paddingBig * 2;
+                background: @primaryLow;
+                position: absolute;
+                right: calc(-@paddingBig - @padding);
+                top: 50vh;
+                border: solid 1px @primaryLow;
+                border-top-right-radius: @padding;
+                border-bottom-right-radius: @padding;
+                &::after {
+                    content: "||";
+                    font-size: @paddingBig;
+                    font-weight: bold;
+                    display: block;
+                    padding-top: @paddingXsmall;
+                    padding-left: @paddingXsmall;
+                }
+                }
+        }
     }
 }
