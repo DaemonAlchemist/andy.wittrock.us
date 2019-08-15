@@ -36,7 +36,8 @@
 }
 
 
-@media (max-width: calc(@contentMaxWidth + (@sidebarWidth + 32px + 19px) * 2)) {
+@media (max-width: calc(@contentMinWidth + @sidebarWidth + @padding * 2)) {
     #sidebar{
+        display: none;
     }
 }
