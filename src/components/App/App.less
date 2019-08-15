@@ -24,6 +24,9 @@ body {
         border-bottom: solid 1px;
         z-index: 999;
         color: @primaryLow;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     .shadow {
@@ -97,6 +100,11 @@ body {
 @media (max-width: calc(@contentMaxWidth + (@sidebarWidth + @padding * 2 + 20px) * 2)) {
     body {
         margin-left: @sidebarWidth + @padding * 2;
+        .page {
+            .shadow {
+                width: calc(100% - @sidebarWidth - @padding * 4);
+            }
+        }
     }
 }
 

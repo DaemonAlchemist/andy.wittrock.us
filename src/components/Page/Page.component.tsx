@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 
 export const PageComponent = (props:IPageProps) =>
     <div className="page">
-        <h1 className="stuck top">{props.title}</h1>
+        <h1 className="stuck top" title={props.title}>{props.title}</h1>
         <div className="top shadow" />
         {React.Children.map(props.preview ? props.children.slice(0, props.preview) : props.children, a => a)}
         <div style={{clear: "both"}} />
