@@ -1,0 +1,3 @@
+interface IPageListProps {
+    tags?:Tag[];
+}
