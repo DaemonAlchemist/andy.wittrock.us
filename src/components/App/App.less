@@ -33,7 +33,7 @@ body {
     .shadow {
         display: block;
         height: 10px;
-        width: 100%;
+        width: @contentMaxWidth;
         position: fixed;
         margin: 0 auto;
         max-width: 50em;
@@ -99,9 +99,11 @@ body {
 }
 
 @width1: @contentMaxWidth + (@sidebarWidth + @padding * 2 + 20px) * 2;
+@margin1: @sidebarWidth + @padding * 2;
 @media (max-width: @width1) {
     body {
-        margin-left: @sidebarWidth + @padding * 2;
+        margin-left: @margin1;
+        margin-right: 0;
         .page {
             .shadow {
                 width: @contentMaxWidth;
@@ -111,27 +113,30 @@ body {
 }
 
 @width2: @contentMaxWidth + @sidebarWidth + @padding * 2;
+@margin2: @sidebarWidth + @padding * 2;
+@bodyWidth2: @sidebarWidth + @padding * 4;
 @media (max-width: @width2) {
     body {
-        margin-left: @sidebarWidth + @padding * 2;
-        width: calc(100% - @sidebarWidth - @padding * 4);
+        margin-left: @margin2;
+        width: calc(100% - @bodyWidth2);
         .page {
             .shadow {
-                width: calc(100% - @sidebarWidth - @padding * 4);
+                width: calc(100% - @bodyWidth2);
             }
         }
     }
 }
 
 @width3: @contentMinWidth + @sidebarWidth + @padding * 2;
+@bodyWidth3:  @padding * 2;
 @media (max-width: @width3) {
     body {
         margin: @padding;
         padding: 0;
-        width: calc(100% - @padding * 2);
+        width: calc(100% - @bodyWidth3);
         .page {
             .shadow {
-                width: calc(100% - @padding * 2);
+                width: calc(100% - @bodyWidth3);
             }
         }
     }
