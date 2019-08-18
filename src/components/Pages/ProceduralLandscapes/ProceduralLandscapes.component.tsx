@@ -21,7 +21,7 @@ const ProceduralLandscapesComponent = (props:IPageComponentProps) =>
             <p>The solution I decided on was to parse a Lisp-style domain specific language into opcodes and use a custom-built virtual machine to execute the landscape heightmap function.  This was my first experience with virtual machine programming, and it was very enlightening.  In future posts, I'll describe the pieces of this prototype landscape generator.  But in the meantime, here are a few samples of what it's capable of right now.</p>
 
             <Grid columns={2}>
-                <Image src="/img/procedural-landscapes/crater-clay-400x300.png" alt="Crater">Mountains</Image>
+                <Image src="/img/procedural-landscapes/crater-clay-400x300.png" alt="Crater">Crater</Image>
                 <Image src="/img/procedural-landscapes/volcano-clay-400x300.png" alt="Volcano">Volcano</Image>
                 <Image src="/img/procedural-landscapes/valley-clay-400x300.png" alt="Valley">Valley</Image>
                 <Image src="/img/procedural-landscapes/mountains-clay-400x300.png" alt="Mountains">Mountains</Image>

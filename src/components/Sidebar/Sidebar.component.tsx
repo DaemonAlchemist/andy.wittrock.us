@@ -28,7 +28,7 @@ export const Sidebar = (props:ISidebarProps) => {
         <h2>Tags</h2>
         <ul>
             {config.menu.tags.map((tag:Tag) => 
-                <MenuLink key={tag} to={`/tags/${tag}`}>
+                <MenuLink key={tag} to={`/tag/${tag}`}>
                     {tag}
                 </MenuLink>
             )}
