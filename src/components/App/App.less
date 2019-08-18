@@ -3,6 +3,7 @@
 body {
     margin: 0 auto;
     max-width: @contentMaxWidth;
+    width: @contentMaxWidth;
     font-family: "Helvetica", "Arial", sans-serif;
     line-height: 1.5;
     padding: @padding;
@@ -97,18 +98,20 @@ body {
     }
 }
 
-@media (max-width: calc(@contentMaxWidth + (@sidebarWidth + @padding * 2 + 20px) * 2)) {
+@width1: @contentMaxWidth + (@sidebarWidth + @padding * 2 + 20px) * 2;
+@media (max-width: @width1) {
     body {
         margin-left: @sidebarWidth + @padding * 2;
         .page {
             .shadow {
-                width: calc(100% - @sidebarWidth - @padding * 4);
+                width: @contentMaxWidth;
             }
         }
     }
 }
 
-@media (max-width: calc(@contentMaxWidth + @sidebarWidth + @padding * 2)) {
+@width2: @contentMaxWidth + @sidebarWidth + @padding * 2;
+@media (max-width: @width2) {
     body {
         margin-left: @sidebarWidth + @padding * 2;
         width: calc(100% - @sidebarWidth - @padding * 4);
@@ -120,7 +123,8 @@ body {
     }
 }
 
-@media (max-width: calc(@contentMinWidth + @sidebarWidth + @padding * 2)) {
+@width3: @contentMinWidth + @sidebarWidth + @padding * 2;
+@media (max-width: @width3) {
     body {
         margin: @padding;
         padding: 0;
