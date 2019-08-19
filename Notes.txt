@@ -1,0 +1,12 @@
+ToDo
+========================
+date display formatter
+next and prev links
+    - chronological
+    - series links
+social links
+    - LinkedIn
+    - Github
+    - Twitter
+properly handle too many links in sidebar
+pagination on homepage
