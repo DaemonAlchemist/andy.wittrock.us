@@ -1,12 +1,14 @@
 ToDo
 ========================
-date display formatter
-next and prev links
-    - chronological
-    - series links
+add resume
+add support for non-article pages (like resume)
 social links
     - LinkedIn
     - Github
     - Twitter
+date display formatter
 properly handle too many links in sidebar
 pagination on homepage
+next and prev links
+    - chronological
+    - series links

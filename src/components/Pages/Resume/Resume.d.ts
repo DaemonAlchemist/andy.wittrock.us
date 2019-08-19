@@ -1,13 +1,10 @@
 
-type Language = "C++" | "Javascript" | "C#";
-
-type Skillset = "Web Development" | "3D Graphics";
-
 type Project = {
-    name: string;
+    bullets: JSX.Element[];
     description: JSX.Element;
-    languages: Language[];
-    skillSets: Skillset[];
+    languages: string[];
+    name: string;
+    skillSets: string[];
 }
 
 type Month = {
@@ -16,11 +13,10 @@ type Month = {
 };
 
 type Job = {
+    bullets: JSX.Element[];
     company: string;
-    startDate: Month;
-    endDate: Month | "current";
-    title: string;
-    languages:Language[];
-    skillSets: Skillset[];
+    endDate?: Month;
     projects: Project[];
+    startDate: Month;
+    title: string;
 };
