@@ -1,5 +1,36 @@
+div.image {
+    border: solid 1px;
+    box-sizing: border-box;
+    margin-bottom: 8px;
+    padding: 8px;
+    text-align: center;
+    width: 100%;
+    &.small {
+        width: 50%;
+    }
+    &.left {
+        float: left;
+        margin-right: 1em;
+        width: 50%;
+        &.small {
+            width: 25%;
+        }
+    }
+    &.right {
+        float: right;
+        margin-left: 1em;
+        width: 50%;
+        &.small {
+            width: 25%;
+        }
+    }
+}
+
 @media(max-width: 640px) {
     div.image {
-        width: calc(100% - 1em - 2px) !important;
+        float: none !important;
+        width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
     }
 }
