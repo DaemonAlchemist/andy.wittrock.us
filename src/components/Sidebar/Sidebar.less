@@ -9,6 +9,7 @@
     padding: 0 @padding;
     background: @primaryLow;
     color: @secondary;
+    z-index: 9999;
     a {
         color: @highlightHigh;
         &:visited {
@@ -45,7 +46,6 @@
         left: -100%;
         margin: 0;
         padding: @padding;
-        z-index: 9999;
         transition: left 250ms;
 
         &.expanded {

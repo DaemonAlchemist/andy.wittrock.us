@@ -3,6 +3,8 @@ import {Link} from 'react-router-dom';
 
 export const PageComponent = (props:IPageProps) =>
     <div className="page">
+        <div className="left-blocker blocker" />
+        <div className="right-blocker blocker" />
         <h1 className="stuck top" title={props.title}>{props.title}</h1>
         <div className="top shadow" />
         {React.Children.map(props.preview ? props.children.slice(0, props.preview) : props.children, a => a)}

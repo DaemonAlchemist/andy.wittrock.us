@@ -12,7 +12,23 @@ body {
     background: @secondary;
 }
 
+@blockerWidth: 20px;
 .page {
+    position: relative;
+    .blocker {
+        position: absolute;
+        width: @blockerWidth;
+        height: calc(100% + 50px);
+        top: 0;
+        background: @secondary;
+        z-index: 9;
+        &.left-blocker {
+            left: -@blockerWidth;
+        }
+        &.right-blocker {
+            right: -@blockerWidth;
+        }
+    }
     a {
         color: @highlight;
         &:visited {
@@ -105,26 +121,16 @@ body {
     body {
         margin-left: @margin1;
         margin-right: 0;
-        .page {
-            .shadow {
-                width: @contentMaxWidth;
-            }
-        }
     }
 }
 
-@width2: @contentMaxWidth + @sidebarWidth + @padding * 2;
+@width2: @contentMaxWidth + @sidebarWidth + @padding * 6;
 @margin2: @sidebarWidth + @padding * 2;
 @bodyWidth2: @sidebarWidth + @padding * 4;
 @media (max-width: @width2) {
     body {
         margin-left: @margin2;
         width: calc(100% - @bodyWidth2);
-        .page {
-            .shadow {
-                width: calc(100% - @bodyWidth2);
-            }
-        }
     }
 }
 
@@ -135,10 +141,5 @@ body {
         margin: @padding;
         padding: 0;
         width: calc(100% - @bodyWidth3);
-        .page {
-            .shadow {
-                width: calc(100% - @bodyWidth3);
-            }
-        }
     }
 }
