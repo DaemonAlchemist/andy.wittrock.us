@@ -7,7 +7,6 @@ social links
     - Github
     - Twitter
 date display formatter
-properly handle too many links in sidebar
 pagination on homepage
 next and prev links
     - chronological

@@ -20,6 +20,21 @@ body {
     border-radius: @padding;
 }
 
+.paginator {
+    text-align: center;
+    .paginator-link {
+        display: inline-block;
+        padding: @paddingXsmall @paddingSmall;
+        color: @secondary;
+        margin-top: @padding;
+        &.current {
+            background: @secondary;
+            border-radius: @paddingSmall;
+            color: @primary;
+        }
+    }
+}
+
 @blockerWidth: 20px;
 .page {
     position: relative;
