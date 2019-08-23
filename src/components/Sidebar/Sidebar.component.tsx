@@ -2,6 +2,7 @@ import { sortBy } from 'atp-pointfree';
 import * as React from 'react';
 import { config } from "../../libs/config";
 import { MenuLink } from '../MenuLink';
+import { Tag } from '../Tag';
 import "./Sidebar.less";
 
 export const Sidebar = (props:ISidebarProps) => {
@@ -28,9 +29,7 @@ export const Sidebar = (props:ISidebarProps) => {
         <h2>Tags</h2>
         <ul>
             {config.menu.tags.map((tag:Tag) => 
-                <MenuLink key={tag} to={`/tag/${tag}`}>
-                    {tag}
-                </MenuLink>
+                <Tag key={tag} tag={tag} />
             )}
         </ul>
     </div>;
