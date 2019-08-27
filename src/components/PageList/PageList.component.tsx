@@ -2,6 +2,7 @@ import { sortBy } from 'atp-pointfree';
 import * as React from 'react';
 import { Link } from 'react-router-dom';
 import { config } from '../../libs/config';
+import {Date} from "../Date";
 
 const intersects = <T extends {}>(a:T[], b:T[]):boolean => a.reduce((cur:boolean, aObj:T):boolean => cur && b.includes(aObj), true);
 
@@ -19,7 +20,7 @@ export const PageList = (props:IPageListProps) =>
                     <page.Component preview />
                     <div style={{display: "grid", gridTemplateColumns: "50% 50%"}}>
                         <div>
-                            <i>Published {page.published}</i>
+                            Published <i><Date date={page.published} /></i>
                         </div>
                         <div style={{textAlign: "right"}}>
                             <Link to={page.url}>...continue reading</Link>
