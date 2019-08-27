@@ -1,10 +1,6 @@
 ToDo
 ========================
-add resume
-social links
-    - LinkedIn
-    - Github
-    - Twitter
+finish resume
 date display formatter
 pagination on homepage
 next and prev links

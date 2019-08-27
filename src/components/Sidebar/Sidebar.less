@@ -10,6 +10,29 @@
     background: @primaryLow;
     color: @secondary;
     z-index: 9999;
+    #sidebar-header {
+        text-align: center;
+        a {
+            font-weight: bold;
+            font-size: x-large;
+            text-decoration: none;
+        }
+    }
+    #sidebar-brands {
+        text-align: center;
+        a {
+            display: inline-block;
+            color: @primaryLow;
+            background: @secondary;
+            padding: 0 @paddingSmall;
+            border-radius: @paddingXsmall;
+            margin: @paddingXsmall;
+            font-size: large;
+            &:hover {
+                background: @highlightHigh;
+            }
+        }
+    }
     a {
         color: @highlightHigh;
         &:visited {

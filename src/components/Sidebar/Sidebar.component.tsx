@@ -1,5 +1,8 @@
+import { faGithubAlt, faLinkedin, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { sortBy } from 'atp-pointfree';
 import * as React from 'react';
+import { Link } from 'react-router-dom';
 import { chunk } from 'ts-functional';
 import { config } from "../../libs/config";
 import { MenuLink } from '../MenuLink';
@@ -25,9 +28,14 @@ export const Sidebar = (props:ISidebarProps) => {
 
     return <div id="sidebar" className={expanded ? "expanded" : undefined} onClick={expand(false)} >
         <div id="handle"><div onClick={expand(true)}/></div>
-        <ul>
-            <MenuLink to="/">{config.site.tagLine}</MenuLink>
-        </ul>
+        <div id="sidebar-header">
+            <Link to="/">{config.site.tagLine}</Link>
+        </div>
+        <div id="sidebar-brands">
+            <a href="https://www.linkedin.com/in/andrewwittrock/"><FontAwesomeIcon icon={faLinkedin} /></a>
+            <a href="https://twitter.com/DaemonAlchemist"><FontAwesomeIcon icon={faTwitter} /></a>
+            <a href="https://github.com/DaemonAlchemist"><FontAwesomeIcon icon={faGithubAlt} /></a>
+        </div>
         <h2>Links</h2>
         <ul>
             {config.menu.links.map((link:ILink) =>
