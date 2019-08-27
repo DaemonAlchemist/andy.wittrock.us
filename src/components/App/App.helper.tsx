@@ -8,7 +8,7 @@ export const fullPage = (page:IPage) => () =>
   </Page>;
 
 export const tagPage = (tag:Tag) => () =>
-  <Page title={`${tag} Pages`} published={""} tags={[]} listed={false}>
+  <Page title={`${tag} Pages`} published={""} tags={[]} listed={false} url="">
     <PageList tags={[tag]} />
   </Page>;
 

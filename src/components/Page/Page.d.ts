@@ -8,6 +8,7 @@ interface IPageProps {
     tags:Tag[];
     title:string;
     updated?:string;
+    url:string;
 }
 
 interface IPageComponentProps {

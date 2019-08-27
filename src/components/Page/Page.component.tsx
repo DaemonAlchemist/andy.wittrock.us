@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
 import { Date } from "../Date";
+import { NavLinks } from '../NavLinks';
 
 export const PageComponent = (props:IPageProps) =>
     <div className="page">
@@ -8,7 +9,9 @@ export const PageComponent = (props:IPageProps) =>
         <div className="right-blocker blocker" />
         <h1 className="stuck top" title={props.title}>{props.title}</h1>
         <div className="top shadow" />
+        {props.listed && <NavLinks page={props} />}
         {React.Children.map(props.preview ? props.children.slice(0, props.preview) : props.children, a => a)}
+        {props.listed && <NavLinks page={props} />}
         <div style={{clear: "both"}} />
         <div className="page-footer stuck bottom" style={{position: "sticky", bottom: 0, borderTop: "solid 1px", background: "#ffffff", zIndex: 999}}>
             {!!props.published && <>Published <i><Date date={props.published} /></i></>}

@@ -1,7 +1,3 @@
 ToDo
 ========================
 finish resume
-pagination on homepage
-next and prev links
-    - chronological
-    - series links
