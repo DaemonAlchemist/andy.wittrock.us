@@ -1,5 +1,6 @@
 import * as React from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { Date } from "../Date";
 
 export const PageComponent = (props:IPageProps) =>
     <div className="page">
@@ -10,8 +11,8 @@ export const PageComponent = (props:IPageProps) =>
         {React.Children.map(props.preview ? props.children.slice(0, props.preview) : props.children, a => a)}
         <div style={{clear: "both"}} />
         <div className="page-footer stuck bottom" style={{position: "sticky", bottom: 0, borderTop: "solid 1px", background: "#ffffff", zIndex: 999}}>
-            {!!props.published && <>Published {props.published}</>}
-            {!!props.updated && <>, last edited {props.updated}</>}
+            {!!props.published && <>Published <i><Date date={props.published} /></i></>}
+            {!!props.updated && <>, last edited <i><Date date={props.updated} /></i></>}
             <br />
             {!!props.tags.length && 
                 <>

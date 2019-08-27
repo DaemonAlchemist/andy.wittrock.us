@@ -29,6 +29,7 @@ export const config:IConfig = {
     ],
     site: {
         author: "Andrew Wittrock",
+        dateFormat: "dddd, MMMM Do, YYYY",
         source: "https://github.com/DaemonAlchemist/andy.wittrock.us",
         tagLine: "andy.wittrock.us",
         title: "Andrew Wittrock",

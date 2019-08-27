@@ -14,6 +14,7 @@ interface IConfig {
         title: string;
         width: string;
         source: string;
+        dateFormat: string;
     };
     menu: {
         links: ILink[];

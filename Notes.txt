@@ -1,7 +1,6 @@
 ToDo
 ========================
 finish resume
-date display formatter
 pagination on homepage
 next and prev links
     - chronological
