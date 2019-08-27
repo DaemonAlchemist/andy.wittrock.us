@@ -6,13 +6,13 @@ import "./Resume.less";
 
 const ResumeComponent = (props:IPageComponentProps) =>
     <>
-        <h1 style={{textAlign: "center", border: "none"}}>Software Engineer</h1>
+        <h1 style={{textAlign: "center", border: "none"}}>Senior Software Engineer</h1>
         {!props.preview && <>
             <hr />
             {jobs.map((job:Job, i:number) => 
                 <div key={i}>
                     <div className="resume-job-title">
-                        <h2 style={{marginBottom: "0"}}>{job.title}</h2>
+                        <h2>{job.title}</h2>
                         <Grid columns={2}>
                             <div><i>{job.company}</i></div>
                             <div style={{textAlign: "right"}}><i>{formatDate(job.startDate)} - {job.endDate ? formatDate(job.endDate) : "Current"}</i></div>
