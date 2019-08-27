@@ -1,3 +1,5 @@
+import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import * as React from 'react';
 
 export const Paginator = (props:IPaginatorProps) => {
@@ -20,14 +22,15 @@ export const Paginator = (props:IPaginatorProps) => {
             key={"first"}
             onClick={click(0)}
         >
-            &lt;&lt;
+            <FontAwesomeIcon icon={faChevronLeft}/>
+            <FontAwesomeIcon icon={faChevronLeft}/>
         </span>
         <span
             className={getClass(1, 0)}
             key={"prev"}
             onClick={click(props.curPage - 1)}
         >
-            &lt;
+            <FontAwesomeIcon icon={faChevronLeft}/>
         </span>
         {(start > 0) && <span>...</span>}
         {pageList.map((i:number) => 
@@ -45,14 +48,15 @@ export const Paginator = (props:IPaginatorProps) => {
             key={"next"}
             onClick={click(props.curPage + 1)}
         >
-            &gt;
+            <FontAwesomeIcon icon={faChevronRight}/>
         </span>
         <span
             className={getClass(1, 0)}
             key={"last"}
             onClick={click(props.pageCount - 1)}
         >
-            &gt;&gt;
+            <FontAwesomeIcon icon={faChevronRight}/>
+            <FontAwesomeIcon icon={faChevronRight}/>
         </span>
     </div>;
 }
