@@ -14,6 +14,8 @@ export const config:IConfig = {
         links: [
             {Component: () => <>Résumé</>, url: "/resume"}
         ],
+        pageCount:5,
+        pageSpread:1,
         tags: ["Minecraft", "C++", "Front End", "3D Graphics", "Algorithms", "Procedural Content", "Utilities"]
     },
     pages: [

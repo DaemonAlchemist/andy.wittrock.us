@@ -19,6 +19,8 @@ interface IConfig {
     menu: {
         links: ILink[];
         tags: Tag[];
+        pageCount:number;
+        pageSpread:number;
     }
     pages:IPage[];
 }
