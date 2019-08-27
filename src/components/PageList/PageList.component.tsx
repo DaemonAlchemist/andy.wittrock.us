@@ -9,6 +9,7 @@ export const PageList = (props:IPageListProps) =>
     <div className="homepage">
         {config.pages
             .filter((page:IPage) => page.url !== '/')  // Note: never include homepage in page list
+            .filter((page:IPage) => page.listed)
             .filter((page:IPage) => !props.tags || intersects(props.tags, page.tags))
             .sort(sortBy("published"))
             .reverse()

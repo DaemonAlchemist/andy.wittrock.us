@@ -1,7 +1,10 @@
 
-interface IPage extends IPageProps {
+interface ILink {
     url:string;
     Component:React.StatelessComponent<IPageComponentProps>;
+}
+
+interface IPage extends IPageProps, ILink {
 }
 
 interface IConfig {
@@ -13,6 +16,7 @@ interface IConfig {
         source: string;
     };
     menu: {
+        links: ILink[];
         tags: Tag[];
     }
     pages:IPage[];

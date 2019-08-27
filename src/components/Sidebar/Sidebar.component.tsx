@@ -16,13 +16,25 @@ export const Sidebar = (props:ISidebarProps) => {
 
     const [curPage, setCurPage] = React.useState(0);
 
-    const chunkedPages = chunk(10)(config.pages.sort(sortBy("published")).reverse());
+    const chunkedPages = chunk(10)(
+        config.pages
+            .filter((page:IPage) => page.listed)
+            .sort(sortBy("published"))
+            .reverse()
+    );
 
     return <div id="sidebar" className={expanded ? "expanded" : undefined} onClick={expand(false)} >
         <div id="handle"><div onClick={expand(true)}/></div>
-        <h2>Links</h2>
         <ul>
             <MenuLink to="/">{config.site.tagLine}</MenuLink>
+        </ul>
+        <h2>Links</h2>
+        <ul>
+            {config.menu.links.map((link:ILink) =>
+                <MenuLink key={link.url} to={link.url}>
+                    <link.Component />
+                </MenuLink>
+            )}
         </ul>
         <h2>Pages</h2>
         <ul>

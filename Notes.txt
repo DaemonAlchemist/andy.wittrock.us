@@ -1,7 +1,6 @@
 ToDo
 ========================
 add resume
-add support for non-article pages (like resume)
 social links
     - LinkedIn
     - Github

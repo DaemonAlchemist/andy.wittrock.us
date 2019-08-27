@@ -49,6 +49,7 @@ const ResumeComponent = (props:IPageComponentProps) =>
 
 export const resume:IPage = {
     Component: ResumeComponent,
+    listed: false,
     published: "2019-04-07",
     tags: [],
     title: "Résumé",

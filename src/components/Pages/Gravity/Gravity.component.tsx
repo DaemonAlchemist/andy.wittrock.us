@@ -33,6 +33,7 @@ const GravityComponent = (props:IPageComponentProps) =>
 
 export const gravity:IPage = {
     Component: GravityComponent,
+    listed: true,
     published: "2014-04-13",
     tags: ["Algorithms"],
     title: "Gravity",

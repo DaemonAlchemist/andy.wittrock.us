@@ -6,6 +6,7 @@ const HomepageComponent = () =>
 
 export const homepage:IPage = {
     Component: HomepageComponent,
+    listed: false,
     published: "",
     tags: [],
     title: "andy.wittrock.us",

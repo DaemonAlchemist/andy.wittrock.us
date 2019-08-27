@@ -31,6 +31,7 @@ const ProceduralLandscapesComponent = (props:IPageComponentProps) =>
 
 export const proceduralLandscapes:IPage = {
     Component: ProceduralLandscapesComponent,
+    listed: true,
     published: "2014-05-15",
     tags: ["Procedural Content", "3D Graphics", "Algorithms"],
     title: "Procedural Landscapes",
