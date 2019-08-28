@@ -1,14 +1,17 @@
 GDPR Regulation Summary
 =======================
 Article 1: What this regulation is about?
+https://gdpr-info.eu/art-1-gdpr/
 =========================================
 The GDPR regulation is meant to protect personal data for EU citizens.
 
 Article 2:  How broad is this regulation?
+https://gdpr-info.eu/art-2-gdpr/
 =========================================
 This applies to anyone who processes user's personal data for commercial purposes.
 
 Article 3:  Where is this regulaton in force?
+https://gdpr-info.eu/art-3-gdpr/
 =============================================
 This regulation applies to organizatons inside the EU.
 This regulation applies to organizations outside the EU if:
@@ -16,10 +19,15 @@ This regulation applies to organizations outside the EU if:
 	- The organization monitors the user's behavior.
 
 Article 4:  Definitions
+https://gdpr-info.eu/art-4-gdpr/
+==============================================
+
 
 Article 5: What do I have to do?
+https://gdpr-info.eu/art-5-gdpr/
 =================================
-You have to tell your users exactly what you'll do with their data.  You can't do anything else with it.
+You can't do anything illegal with the users' personal data, and you have to treat users' data in an unbiased manner.
+You have to tell your users exactly what you'll do with their data (the "Purpose").  You can't do anything else with it.
 Archiving data for research or statistical purposes are ok without additional consent.
 You can only collect data that is actually needed for what you told your users you'll do with it.
 You keep your users' data up to date, and correct errors as soon as reasonably possible.
@@ -28,43 +36,57 @@ You have to protect your users data.
 You have to be able to show that you're complying with the above.
 
 Article 6:  When is it ok to use a user's data?
+https://gdpr-info.eu/art-6-gdpr/
 ===============================================
 You can only use the user's data if:
 	- The user has explicitly told you that it's ok.  "Explicitly" means no pre-checked checkboxes, or "you consent by continuing to use this site,"
 	- You need the data to do something the user asked you to, like fill an order, or
-If you want to use the data for something else that the user has not consented to, you need to show that it's related enough to the initial purpose.
+	- You need to use the data to fulfill a legal requirement,
+	- You need to protect the interests of the user,
+	- You are a public official performing your official duties, or
+	- You need to use the data for your business, unless your need conflicts with users' rights and freedoms.
+	
+If you want to use the data for something else that the user has not explicitly consented to, you need to show that it's related enough to the initial purpose.
 
 Article 7:  Getting user consent
+https://gdpr-info.eu/art-7-gdpr/
 ================================
-If you get consent before using a user's data, you must be able to show that the user consented.
-Requests for consent to use a user's data must be written in clear language and not hidden in other text or consents.
+You must be able to show that the user consented to the use of their data.
+Requests for consent to use a user's data must be written in clear language and not hidden in other text or consents.  Don't trick your users into giving consent.
 A user must be able to withdraw consent at any time, and withdrawing consent must be as easy as giving consent.
 You shouldn't require consent to use a site or service that doesn't require the use of the user's personal data.
 
 Article 8:  Consent for children
+https://gdpr-info.eu/art-8-gdpr/
 ================================
 Parents must give consent for children.
 By default, anyone under 16 is considered a child, but EU states are allowed to set the age as low as 13.
 You must make an effort to ensure that parents are giving consent if a user is a child.
 
 Articles 9 & 10:  Sensitive Data
+https://gdpr-info.eu/art-9-gdpr/
+https://gdpr-info.eu/art-10-gdpr/
 ================================
 Do not process sensitive data from users (gender, race, politics, religion, etc.) unless the user has given consent or you have a really good reason.
+Do not process information about users' crimes unless you have explicit permission from the government.
 
 Article 11:  Impossible data requests
+https://gdpr-info.eu/art-11-gdpr/
 =====================================
 If you don't retain data sufficient to identify a user when they make a request to get or delete their data, you don't have to comply unless the user provides additional data sufficient to identify their data.
 
 Article 12:  Transparency
+https://gdpr-info.eu/art-12-gdpr/
 =========================
 Service data requests by your users in a timely manner, unless you do not have the ability to identify the user.  In any case, response to all requests in a timely manner.
 You have a month to respond and have to inform the user that they can file a complaint if you don't.
-Requests for information under Articles 13 and 14 must be free, unless the user is being a pain in the butt about it, in which case you can charge a fee, or refuse.
-Article 13 and 14 info may be provided with icons.
+Requests for information under Articles 13 and 14 must be free, unless the user is being a pain in the butt about it, in which case you can charge a fee, or refuse.  However, you'll need to be able to show why the user was being a pain in the butt.
+If you're not sure who the user is, you can ask for more information.
 
 ...
 
 Article 13:  Personal data the user gives you themselves
+https://gdpr-info.eu/art-13-gdpr/
 =================================================================
 When the user first visits your site, you have to tell them:
 	- Who you are and how to contact you and/or your representative.
@@ -79,11 +101,12 @@ When the user first visits your site, you have to tell them:
 		- Withdraw consent (if applicable)
 		- Lodge a complaint
 	- Whether the user needs to provide their data to use your site.  If so, why is their data required.
-	- Whether there are automated profiling and decision making tools that process their data, as well as how they work and what will the profiles be used for.
+	- Whether there are automated profiling and decision making tools that process their data, as well as how they work and what the profiles will be used for.
 If you decide to use the user's data for something other than why it was collected, you have to tell them and also provide the previous info.
 You don't have to do any of this if the user already knows.
 
 Article 14:  Personal data about the user someone else gave you
+https://gdpr-info.eu/art-14-gdpr/
 ===============================================================
 When you get data about the user from someone else, you have to tell the user:
 	- Who you are and how to contact you and/or your representative.
@@ -95,11 +118,12 @@ If you decide to use the user's data for something other than why it was collect
 You don't have to do any of this if the user already knows.
 
 Article 15:  Access rights
+https://gdpr-info.eu/art-15-gdpr/
 ==========================
 The user has the right to request whether their data is being used, and if so:
 	- For what purpose
 	- What data you have
-	- Who did you give the data to
+	- Who you gave or will give the data to
 	- How long the data will be stored.
 	- Knowledge of their rights
 	- Where you got the information (if not from the user themselves)
@@ -107,27 +131,97 @@ The user has the right to request whether their data is being used, and if so:
 	- What security is used while transferring the information.
 You have to provide this information for free the first time.  You may then charge a reasonable fee for more requests.
 
-Article 16:  The user will have the right to correct any data you have on them.
+Article 16:  Right to correct errors
+https://gdpr-info.eu/art-16-gdpr/
+=======================================
+The user will have the right to correct any data you have on them.
 
 Article 17:  Right to be forgotten
+https://gdpr-info.eu/art-17-gdpr/
 ==================================
-The user can request that you delete their data if you no longer need it, or they withdraw consent.  You may refuse if you need the data for legal reasons.
+The user can request that you delete their data if you no longer need it, or they withdraw consent.  You may refuse if you need the data for legal reasons.  If you made the data public, you need to tell everyone using it that the user asked for it to be erased.
 
 Article 18:  Right to not be used
+https://gdpr-info.eu/art-18-gdpr/
 ==================================
 The user can request that you not process their data if you no longer need it, or it is inaccurate.  You may refuse if you need the data for legal reasons.
 You have to tell the user before you start using their data again.
 
-Article 19:  You have to inform your user(s) if you fix, delete, or restrict their data
+Article 19:  Notification of changes
+https://gdpr-info.eu/art-19-gdpr/
+===================================
+You have to inform your user(s) if you fix, delete, or restrict their data
 
-Article 20:  The user has the right to have an export of their data in a commonly used machine readable format.
+Article 20:  Right to get data
+https://gdpr-info.eu/art-20-gdpr/
+==================================
+The user has the right to have an export of their data in a commonly used machine readable format.
 
-Article 21:  The user has the right to ask you to not use their information for direct marketing purposes.
+Article 21:  Right to object
+https://gdpr-info.eu/art-21-gdpr/
+====================================
+The user has the right to ask you to not use their information for direct marketing purposes.
 
-Article 22:  You can't make a decision that affects a user based solely on automated processing.
+Article 22:  Automating decision making
+https://gdpr-info.eu/art-22-gdpr/
+=========================================
+You can't make a decision that affects a user based solely on automated processing unless the user said you could.
 
-Article 24 &25:  Protecting data
+Article 23:  Restrictions
+https://gdpr-info.eu/art-23-gdpr/
+==================================
+Countries can write laws to change the rights and obligations of this law if needed for legitimate purposes.
+
+Article 24 & 25:  Protecting data
+https://gdpr-info.eu/art-24-gdpr/
+https://gdpr-info.eu/art-25-gdpr/
 ================================
 You are responsible for protecting the user's data, and should be able to show that you are complying with this regulation.
 You should store and process data in a way that protects a user's identity.
 You should send only data that is needed for particular purposes.
+
+Article 26:  Working Together
+https://gdpr-info.eu/art-26-gdpr/
+===================================
+If you work with someone else to use a user's data, you will decide together who is responsible for what in regards to complying with this law.
+
+Article 27:  Representative
+https://gdpr-info.eu/art-27-gdpr/
+===================================
+You need to have someone who can speak for you about this law.
+
+Article 28: Data Processors
+https://gdpr-info.eu/art-28-gdpr/
+===================================
+Anyone you use to process users' data should be able to show that they are complying with this law.
+Processors can't subcontract processing without your approval.
+You need to have a contract in place with any processors to ensure that you are both following this law.
+Anyone you use to process data should inform you immediately if you ask them to do something they think is illegal.
+
+Article 29:  Unauthorized Processing
+https://gdpr-info.eu/art-29-gdpr/
+=================================
+You, anyone working for you, or anyone working for anyone you use to process data shouldn't do anything with the data unless you tell them to.
+
+Article 30:  Records
+https://gdpr-info.eu/art-30-gdpr/
+===================================
+You need to keep records of how and when you use a user's data, unless you're a small company who only occasionally does stuff with the data.
+
+Article 31:  Cooperation
+https://gdpr-info.eu/art-31-gdpr/
+==================================
+You have to cooperate with the authorities when they're enforcing this law.
+
+Article 32:  Security
+https://gdpr-info.eu/art-32-gdpr/
+==================================
+You have to ensure that your users' data is kept secure.
+
+Article 33 & 34:  Data breachs
+https://gdpr-info.eu/art-33-gdpr/
+https://gdpr-info.eu/art-34-gdpr/
+=================================
+You have to report data breachs to the authorities within 3 days of becoming aware of them.
+You have to report data breachs to your users as soon as possible after becoming aware of them.
+
