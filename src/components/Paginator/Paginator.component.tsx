@@ -3,7 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import * as React from 'react';
 
 export const Paginator = (props:IPaginatorProps) => {
-    const click = (page:number) => () => {
+    const click = (page:number) => (e:any) => {
+        e.stopPropagation();
         if(page >= 0 && page < props.pageCount) {
             props.onClick(page);
         }
