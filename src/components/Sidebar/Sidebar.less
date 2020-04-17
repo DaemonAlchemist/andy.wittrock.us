@@ -20,6 +20,7 @@
     }
     #sidebar-brands {
         text-align: center;
+        margin-bottom: @padding;
         a {
             display: inline-block;
             color: @primaryLow;
@@ -48,9 +49,11 @@
         }
     }
     h2 {
-        border-bottom: solid 2px;
         margin-bottom: 0;
         color: @secondary;
+        background: @primary;
+        margin: 0 -@padding;
+        padding: 0 @padding;
         &:first-child {
             margin-top: @padding;
         }
@@ -67,6 +70,10 @@
     }
     #handle {
         display: none;
+    }
+
+    .paginator {
+        margin-bottom: @padding;
     }
 }
 
