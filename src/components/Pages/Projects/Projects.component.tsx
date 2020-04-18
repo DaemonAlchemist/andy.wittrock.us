@@ -8,6 +8,36 @@ const ProjectsComponent = (props:IPageComponentProps) =>
         {!props.preview && <>
             <hr/>
             <ProjectCard
+                title="EvilInnocence"
+                technologies={["Apache", "Magento", "MySQL", "S3"]}
+                languages={["PHP", "HTML", "CSS"]}
+                imageSrc="https://picsum.photos/512/256"
+                url="https://www.evilinnocence.com/"
+            >
+                <b>EvilInnocence</b> is an e-commerce site focusing on content for the 3D graphics programs Poser and DAZ Studio.  It is built on a custom CMS platform integrated with the Magento e-commerce system.  Several custom Magento modules were also created to handle the specific business requirements of the site.
+            </ProjectCard>
+            <hr/>
+            <ProjectCard
+                title="CrossDresser"
+                technologies={["3D Graphics", "Algorithms", "Qt"]}
+                languages={["C++"]}
+                imageSrc="https://picsum.photos/512/256"
+                url="https://www.evilinnocence.com/crossdresser"
+            >
+                <b>CrossDresser</b> is a clothing conversion utility for the Poser and DAZ studio programs.  It is designed to automatically convert clothing from one charater to another.  It is build in C++ and a Qt user interface, and utilizes numerous complex algorithms to provide fast and accurate conversions.  Most clothing can be converted in as little as a few seconds.
+            </ProjectCard>
+            <hr/>
+            <ProjectCard
+                title="Digital Alchemy"
+                technologies={["3D Graphics", "Procedural Content", "Poser", "DAZ Studio", "Unity"]}
+                languages={["C++", "C#"]}
+                imageSrc="https://picsum.photos/512/256"
+                url="https://www.evilinnocence.com/shop/store/shop-by-theme/digital-alchemy.html"
+            >
+                <b>Digital Alchemy</b> is a line of procedural content products for Poser and DAZ Studio.  They provide the ability to automatically create randomly generated plants, props, and environments.  The product line is currently being re-implemented into a Unity library in order to provide procedural content for games as well.
+            </ProjectCard>
+            <hr/>
+            <ProjectCard
                 title="Darkwynd Chronicles"
                 technologies={["React", "Redux", "AWS", "S3", "MySQL", "API Gateway", "Serverless", "REST", "Lambda"]}
                 languages={["Javascript", "HTML", "CSS"]}
@@ -25,6 +55,15 @@ const ProjectsComponent = (props:IPageComponentProps) =>
                 url="https://viz.darkwyndchronicles.com/index.html"
             >
                 To simplify the drawing process for the Darkwynd Chronicles project, I created a Unity-based viz tool to allow the artist to more clearly see environment layouts.  Sets are modeled in 3D Studio, and ported into Unity for viewing.  Creating a robust toon shader with crisp uniform lines required custom GLSL shader programming and post-processing effects.
+            </ProjectCard>
+            <hr/>
+            <ProjectCard
+                title="Darkwynd Story Bible"
+                technologies={["React", "AWS", "S3", "Api Gateway", "Lambda"]}
+                languages={["Typescript", "HTML", "CSS"]}
+                imageSrc="https://picsum.photos/512/256"
+            >
+                The Darkwynd story bible is a React site that provides access to story information to the Darkwynd team.  The frontend is built in React, and reads data from a serverless API running on AWS Lambda.  The API pulls the story bible data from an S3 bucket.
             </ProjectCard>
             <hr/>
             <ProjectCard
