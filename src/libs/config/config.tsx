@@ -7,12 +7,14 @@ import { minecraftToMaxPart2 } from '../../components/Pages/MinecraftToMaxPart_2
 import { minecraftToMaxPart3 } from '../../components/Pages/MinecraftToMaxPart_3';
 import { prematureOptimization } from '../../components/Pages/PrematureOptimization';
 import { proceduralLandscapes } from '../../components/Pages/ProceduralLandscapes';
+import { projects } from "../../components/Pages/Projects";
 import { resume } from "../../components/Pages/Resume";
 
 export const config:IConfig = {
     menu: {
         links: [
-            {Component: () => <>Résumé</>, url: "/resume"}
+            {Component: () => <>Résumé</>, url: "/resume"},
+            {Component: () => <>Projects</>, url: "/projects"},
         ],
         pageCount:5,
         pageSpread:1,
@@ -20,6 +22,7 @@ export const config:IConfig = {
     },
     pages: [
         // HYGEN_PAGE_INJECT
+        projects,
         homepage,
         minecraftToMaxConverter,
         minecraftToMaxPart2,

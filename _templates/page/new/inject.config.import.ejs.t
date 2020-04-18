@@ -1,6 +1,6 @@
 ---
 inject: true
-to: src/libs/config/config.ts
+to: src/libs/config/config.tsx
 at_line: 2
 skip_if: <%= h.changeCase.camelCase(title) %>
 ---
