@@ -1,4 +1,5 @@
 import { faGithubAlt, faLinkedin, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import { faLink, faNewspaper, faTags } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { sortBy } from 'atp-pointfree';
 import * as React from 'react';
@@ -36,7 +37,7 @@ export const Sidebar = (props:ISidebarProps) => {
             <a href="https://twitter.com/DaemonAlchemist"><FontAwesomeIcon icon={faTwitter} /></a>
             <a href="https://github.com/DaemonAlchemist"><FontAwesomeIcon icon={faGithubAlt} /></a>
         </div>
-        <h2>Links</h2>
+        <h2><FontAwesomeIcon icon={faLink} /> Links</h2>
         <ul>
             {config.menu.links.map((link:ILink) =>
                 <MenuLink key={link.url} to={link.url}>
@@ -44,7 +45,7 @@ export const Sidebar = (props:ISidebarProps) => {
                 </MenuLink>
             )}
         </ul>
-        <h2>Pages</h2>
+        <h2><FontAwesomeIcon icon={faNewspaper} /> Pages</h2>
         <Paginate
             bottom
             data={pages}
@@ -53,7 +54,7 @@ export const Sidebar = (props:ISidebarProps) => {
             Component={PageLink}
             Wrapper={List}
         />
-        <h2>Tags</h2>
+        <h2><FontAwesomeIcon icon={faTags} /> Tags</h2>
         <ul>
             {config.menu.tags.sort().map((tag:Tag) => 
                 <Tag key={tag} tag={tag} />

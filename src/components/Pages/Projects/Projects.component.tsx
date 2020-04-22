@@ -102,7 +102,15 @@ const ProjectsComponent = (props:IPageComponentProps) =>
                 technologies={["React", "Redux", "Qt"]}
                 languages={["C++", "Typescript"]}
              >
-                To increase throughput, several workflow utilities were created to speed up the development of Poser and DAZ studio content.  Examples include automatic character rigger, product quality checker, and bulk morph extractor.  These utilities together removed about 80% of the non-creative boilerplate work necessary to create, package, and release new content.
+                To increase throughput, several workflow utilities were created to speed up the development of Poser and DAZ studio content.  Examples include:
+                <ul>
+                    <li>Clothing rigger:  Copies rigging from base figures into conforming clothing objects.</li>
+                    <li>Product finalizer:  Automatically performs more than a dozen tedious finalizing steps necessary to complete a Poser product.</li>
+                    <li>Product quality checker:  Checks a product for missing files, invalid paths, and absolute paths.</li>
+                    <li>Bulk morph extractor:  Extracts morphs from a Poser file in bulk for editing.</li>
+                    <li>Facial rigging helper utility:  Creates a character facial rig from specially crafted expression morphs.</li>
+                </ul>
+                These utilities together removed about 80% of the non-creative boilerplate work necessary to create, package, and release new content.
              </ProjectCard>
 
              <ProjectCard
@@ -111,12 +119,12 @@ const ProjectsComponent = (props:IPageComponentProps) =>
                 languages={["Typscript", "C++"]}
                 url="https://github.com/DaemonAlchemist"
              >
-                I also am the creator of several useful libraries, including:
+                I am also the creator of several useful libraries, including:
                 <ul>
                     <li><a href="https://www.npmjs.com/package/the-reducer">the-reducer</a>:  A fully typed Redux reducer creator for relational data.</li>
                     <li><a href="https://www.npmjs.com/package/ts-functional">ts-functional</a>:  A library of useful functional programming utilities.</li>
                     <li><a href="https://www.npmjs.com/package/react-flicker">react-flicker</a>:  For when the <Blink>blink tag</Blink> is <Flicker>not</Flicker> <Jitter>annoying</Jitter> <Jitter count={3}><Flicker>enough</Flicker></Jitter>.</li>
-                    <li>C++ libraries:  A large number of proprietary 3d graphics, math, and procedural content libraries written in C++ in the processs of being open-sourced.</li>
+                    <li>A large number of proprietary 3d graphics, math, and procedural content libraries written in C++ in the processs of being open-sourced.</li>
                 </ul>
              </ProjectCard>
         </>}
