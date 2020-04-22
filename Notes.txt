@@ -1,3 +1,51 @@
 ToDo
 ========================
 finish resume
+
+
+
+projects to include
+===================
+evilinnocence
+	main site
+	magento site
+crossdresser
+digital alchemy
+
+darkwynd chronicles
+viz tool
+story bible
+
+15 mobile game
+Memory mobile games
+
+doit
+personal blog
+seven
+once-upon-a-ti.me
+
+various poser utilities
+flatter
+facelift
+cr2 editor
+3D modeling
+
+libraries
+	ts-functional
+	the-reducer
+	atp-pointfree
+	simple-redux container
+	old ATP php libraries
+c++ libs
+	general math: vector, coordinate systems, matrix, etc.
+	poser
+	other
+
+wormhole raytracer
+minecraft2max converter
+
+
+LeMans dashboard
+Weather Central weather warning system
+GravityMarket
+GravityStream
