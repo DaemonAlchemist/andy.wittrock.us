@@ -2,6 +2,7 @@
 import * as React from 'react';
 import { gravity } from '../../components/Pages/Gravity';
 import { homepage } from "../../components/Pages/Homepage";
+import { magic } from '../../components/Pages/Magic';
 import { minecraftToMaxConverter } from '../../components/Pages/MinecraftToMaxConverter';
 import { minecraftToMaxPart2 } from '../../components/Pages/MinecraftToMaxPart_2';
 import { minecraftToMaxPart3 } from '../../components/Pages/MinecraftToMaxPart_3';
@@ -22,6 +23,7 @@ export const config:IConfig = {
     },
     pages: [
         // HYGEN_PAGE_INJECT
+        magic,
         projects,
         homepage,
         minecraftToMaxConverter,

@@ -9,6 +9,7 @@
   },
   "rules": {
     "jsx-boolean-value": false,
+    "no-console": false,
     "no-reference": false
   }
 }
