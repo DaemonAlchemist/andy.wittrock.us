@@ -1,5 +1,7 @@
 import { IColor } from './Magic.d';
 
+// --- BEGIN CONFIG -- //
+
 export const colors = [
     {name: "Red",        kingdom: "",         color: "#ff0000", stroke: "#880000"},
     {name: "Vermillion", kingdom: "",         color: "#ff4400", stroke: "#882200"},
@@ -16,14 +18,12 @@ export const colors = [
 ];
 
 export const harmonicValues = [
-    ["Increase", "Pull", "Confront", "Decrease", "Push", "Avoid"],
-    ["Water", "Earth", "Fire", "Wind"],
-    ["Create", "Destroy", "Maintain"],
-    ["Order", "Chaos"],
+    ["Increase", "Pull",    "Confront", "Decrease", "Push", "Avoid"],
+    ["Water",    "Earth",   "Fire",     "Wind"],
+    ["Create",   "Destroy", "Maintain"],
+    ["Order",    "Chaos"],
     ["Life"],
 ]
-
-export const getHarmonicValue = (offset:number, harmonic:number) => harmonicValues[harmonic][offset % harmonicValues[harmonic].length];
 
 export const harmonics = [
     {level: 1, name: "Action",   width:5, offsets: [6],                                 color: {r:255, g:  0, b:  0}},
@@ -40,9 +40,15 @@ export const config = {
     rotation: 1,
 }
 
+// --- END CONFIG -- //
+
+export const getHarmonicValue = (offset:number, harmonic:number) => harmonicValues[harmonic][offset % harmonicValues[harmonic].length];
+
+// On screen location of circle centers
 export const x = (i:number, width:number) => width / 2 + sin(i) * config.offset * width;
 export const y = (i:number, width:number) => width / 2 + cos(i) * config.offset * width;
 
+// Sine and cosine functions based on circle offset
 export const sin = (i:number) => Math.sin((i + config.rotation) * Math.PI / 6);
 export const cos = (i:number) => Math.cos((i + config.rotation) * Math.PI / 6);
 
@@ -52,6 +58,7 @@ const resonance3Mult = 0.333; //  6 zones x 2
 const resonance4Mult = 0.167; // 12 zones x 1
 const multTotal = resonance1Mult + resonance2Mult + resonance3Mult + resonance4Mult;
 
+// Total resonance between two colors
 export const resonance = (i1:number, i2:number) => {
     const dot1 = Math.round((cos(i1 * 1) * cos(i2 * 1) + sin(i1 * 1) * sin(i2 * 1)) * 1000) / 1000;
     const dot2 = Math.round((cos(i1 * 2) * cos(i2 * 2) + sin(i1 * 2) * sin(i2 * 2)) * 1000) / 1000;
@@ -65,6 +72,7 @@ export const resonance = (i1:number, i2:number) => {
     ) / multTotal;
 }
 
+// Connection color between two circles
 export const color = (col:IColor, i1:number, i2:number) => {
     let dot = resonance(i1, i2);
     dot = Math.abs(dot);

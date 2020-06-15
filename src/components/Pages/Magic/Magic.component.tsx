@@ -49,17 +49,23 @@ const MagicComponent = (props:IPageComponentProps) => {
             </Stage>
             {selectedNode !== undefined && <>
                 <h2>
+                    <span style={{
+                        backgroundColor: colors[selectedNode].color,
+                        display: "inline-block",
+                        height: "16px",
+                        marginRight: "8px",
+                        width: "16px",
+                    }} />
                     {colors[selectedNode].kingdom || <>{colors[selectedNode].name} Kingdom</>}
-                    ({colors[selectedNode].name})
                 </h2>
-                <table>
+                <table className="data-table info-table">
                     <thead>
                         <tr>
-                            <th>1st Harmonic<br/>{harmonics[0].name}</th>
-                            <th>2nd Harmonic<br/>{harmonics[1].name}</th>
-                            <th>3rd Harmonic<br/>{harmonics[2].name}</th>
-                            <th>4th Harmonic<br/>{harmonics[2].name}</th>
-                            <th>5th Harmonic<br/>{harmonics[4].name}</th>
+                            <th>1st Harmonic<br/><em>{harmonics[0].name}</em></th>
+                            <th>2nd Harmonic<br/><em>{harmonics[1].name}</em></th>
+                            <th>3rd Harmonic<br/><em>{harmonics[2].name}</em></th>
+                            <th>4th Harmonic<br/><em>{harmonics[3].name}</em></th>
+                            <th>5th Harmonic<br/><em>{harmonics[4].name}</em></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -70,21 +76,38 @@ const MagicComponent = (props:IPageComponentProps) => {
                         </tr>
                     </tbody>
                 </table>
-                <table>
+
+                <table className="data-table relation-table">
                     <thead>
                         <th>Kingdom</th>
                         <th>Resonance</th>
-                        <th>1st Harmonic<br/>{harmonics[0].name}</th>
-                        <th>2nd Harmonic<br/>{harmonics[1].name}</th>
-                        <th>3rd Harmonic<br/>{harmonics[2].name}</th>
-                        <th>4th Harmonic<br/>{harmonics[3].name}</th>
-                        <th>5th Harmonic<br/>{harmonics[4].name}</th>
+                        <th>1st Harmonic<br/><em>{harmonics[0].name}</em></th>
+                        <th>2nd Harmonic<br/><em>{harmonics[1].name}</em></th>
+                        <th>3rd Harmonic<br/><em>{harmonics[2].name}</em></th>
+                        <th>4th Harmonic<br/><em>{harmonics[3].name}</em></th>
+                        <th>5th Harmonic<br/><em>{harmonics[4].name}</em></th>
                     </thead>
                     <tbody>
                         {colors.map((c, i) => i !== selectedNode
                             ? <tr key={i}>
-                                <td>{c.kingdom || <>{c.name} Kingdom</>}</td>
-                                <td style={{textAlign: "right"}}>{resonance(selectedNode, i).toFixed(4)}</td>
+                                <td style={{whiteSpace: "nowrap"}}>
+                                    <span style={{
+                                        backgroundColor: c.color,
+                                        display: "inline-block",
+                                        height: "16px",
+                                        marginRight: "8px",
+                                        width: "16px",
+                                    }} />
+                                    {c.kingdom || <>{c.name} Kingdom</>}
+                                </td>
+                                <td style={{
+                                    backgroundColor: resonance(selectedNode, i) < 0
+                                        ? `rgba(255,   0, 0, ${Math.abs(resonance(selectedNode, i))})`
+                                        : `rgba(  0, 255, 0, ${Math.abs(resonance(selectedNode, i))})`,
+                                    textAlign: "right",
+                                }}>
+                                    {resonance(selectedNode, i).toFixed(4)}
+                                </td>
                                 {harmonics.map((h, hi) => {
                                     const match = h.offsets.map((o) => (i + o + 12) % 12).includes(selectedNode);
                                     return <td key={h.level} style={{
