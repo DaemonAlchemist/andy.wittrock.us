@@ -5,6 +5,12 @@ import { Connection } from './Connection';
 import { colors, config, getHarmonicValue, harmonics, resonance, x, y } from './Magic.helpers';
 import "./Magic.less";
 
+const SpellClass = (props:{i:number, harmonics:number[]}) => <>
+    <span className="spell-class">
+        {props.harmonics.map((h) => getHarmonicValue(props.i, h)).join(" / ")}
+    </span>
+</>;
+
 const MagicComponent = (props:IPageComponentProps) => {
     const [width, setWidth] = React.useState(0);
 
@@ -17,6 +23,11 @@ const MagicComponent = (props:IPageComponentProps) => {
     const [selectedNode, setSelectedNode] = React.useState<number | undefined>(undefined);
     const selectNode = (i:number) => () => {
         setSelectedNode(i !== selectedNode ? i : undefined);
+    }
+
+    const [selectedRelation, setSelectedRelation] = React.useState<number | undefined>(undefined);
+    const selectRelation = (i:number) => () => {
+        setSelectedRelation(i !== selectedRelation ? i : undefined);
     }
 
     return <>
@@ -77,6 +88,40 @@ const MagicComponent = (props:IPageComponentProps) => {
                     </tbody>
                 </table>
 
+                <h2>Spell Classes</h2>
+                <SpellClass i={selectedNode} harmonics={[0]} />
+                <SpellClass i={selectedNode} harmonics={[1]} />
+                <SpellClass i={selectedNode} harmonics={[2]} />
+                <SpellClass i={selectedNode} harmonics={[3]} />
+                <SpellClass i={selectedNode} harmonics={[4]} />
+                <SpellClass i={selectedNode} harmonics={[0, 1]} />
+                <SpellClass i={selectedNode} harmonics={[0, 2]} />
+                <SpellClass i={selectedNode} harmonics={[0, 3]} />
+                <SpellClass i={selectedNode} harmonics={[0, 4]} />
+                <SpellClass i={selectedNode} harmonics={[1, 2]} />
+                <SpellClass i={selectedNode} harmonics={[1, 3]} />
+                <SpellClass i={selectedNode} harmonics={[1, 4]} />
+                <SpellClass i={selectedNode} harmonics={[2, 3]} />
+                <SpellClass i={selectedNode} harmonics={[2, 4]} />
+                <SpellClass i={selectedNode} harmonics={[3, 4]} />
+                <SpellClass i={selectedNode} harmonics={[0, 1, 2]} />
+                <SpellClass i={selectedNode} harmonics={[0, 1, 3]} />
+                <SpellClass i={selectedNode} harmonics={[0, 1, 4]} />
+                <SpellClass i={selectedNode} harmonics={[0, 2, 3]} />
+                <SpellClass i={selectedNode} harmonics={[0, 2, 4]} />
+                <SpellClass i={selectedNode} harmonics={[0, 3, 4]} />
+                <SpellClass i={selectedNode} harmonics={[1, 2, 3]} />
+                <SpellClass i={selectedNode} harmonics={[1, 2, 4]} />
+                <SpellClass i={selectedNode} harmonics={[1, 3, 4]} />
+                <SpellClass i={selectedNode} harmonics={[2, 3, 4]} />
+                <SpellClass i={selectedNode} harmonics={[0, 1, 2, 3]} />
+                <SpellClass i={selectedNode} harmonics={[0, 1, 2, 4]} />
+                <SpellClass i={selectedNode} harmonics={[0, 1, 3, 4]} />
+                <SpellClass i={selectedNode} harmonics={[0, 2, 3, 4]} />
+                <SpellClass i={selectedNode} harmonics={[1, 2, 3, 4]} />
+                <SpellClass i={selectedNode} harmonics={[0, 1, 2, 3, 4]} />
+
+                <h2>Harmonic Relations</h2>
                 <table className="data-table relation-table">
                     <thead>
                         <th>Kingdom</th>
@@ -89,7 +134,11 @@ const MagicComponent = (props:IPageComponentProps) => {
                     </thead>
                     <tbody>
                         {colors.map((c, i) => i !== selectedNode
-                            ? <tr key={i}>
+                            ? <tr
+                                className={i === selectedRelation ? "selected-relation" : undefined}
+                                key={i}
+                                onClick={selectRelation(i)}
+                            >
                                 <td style={{whiteSpace: "nowrap"}}>
                                     <span style={{
                                         backgroundColor: c.color,
@@ -124,6 +173,10 @@ const MagicComponent = (props:IPageComponentProps) => {
                         )}
                     </tbody>
                 </table>
+                
+                {selectedNode !== undefined && selectedRelation !== undefined && <>
+                </>}
+
             </>}
         </div>}
     </>;

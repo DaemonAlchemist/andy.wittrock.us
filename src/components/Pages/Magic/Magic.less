@@ -19,6 +19,8 @@
     width: 100%;
     th, td {
         padding: 4px;
+        border: solid 2px rgba(0, 0, 0, 0);
+        margin: 0;
     }
     th {
         background-color: #aaaaaa;
@@ -29,4 +31,20 @@
     tr:nth-child(2n + 1) {
         background-color: #dddddd;
     }
+
+    tr.selected-relation {
+        td {
+            border: solid 2px #aaaaff;
+        }
+    }
+}
+
+.spell-class {
+    display: inline-block;
+    white-space: nowrap;
+    background-color: #dddddd;
+    padding: 4px 8px;
+    margin: 4px;
+    border: solid 1px;
+    border-radius: 16px;
 }

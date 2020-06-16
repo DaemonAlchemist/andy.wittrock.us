@@ -26,11 +26,11 @@ export const harmonicValues = [
 ]
 
 export const harmonics = [
-    {level: 1, name: "Action",   width:5, offsets: [6],                                 color: {r:255, g:  0, b:  0}},
-    {level: 2, name: "Element",  width:4, offsets: [4, -4],                             color: {r:  0, g:255, b:  0}},
-    {level: 3, name: "Method",   width:3, offsets: [3, -3, -6],                         color: {r:  0, g:  0, b:255}},
-    {level: 4, name: "Attitude", width:2, offsets: [2, 4, 6, -2, -4],                   color: {r:255, g:255, b:  0}},
-    {level: 5, name: "Energy",   width:1, offsets: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], color: {r:255, g:  0, b:255}},
+    {level: 1, name: "Direction",   width:5, offsets: [6],                                 color: {r:255, g:  0, b:  0}},
+    {level: 2, name: "Element",     width:4, offsets: [4, -4],                             color: {r:  0, g:255, b:  0}},
+    {level: 3, name: "Method",      width:3, offsets: [3, -3, -6],                         color: {r:  0, g:  0, b:255}},
+    {level: 4, name: "Attitude",    width:2, offsets: [2, 4, 6, -2, -4],                   color: {r:255, g:255, b:  0}},
+    {level: 5, name: "Energy",      width:1, offsets: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], color: {r:255, g:  0, b:255}},
 ]
 
 export const config = {
