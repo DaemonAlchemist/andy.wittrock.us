@@ -67,10 +67,10 @@ export const y = (i:number, width:number) => width / 2 + cos(i) * config.offset 
 export const sin = (i:number) => Math.sin((i + config.rotation) * Math.PI / 6);
 export const cos = (i:number) => Math.cos((i + config.rotation) * Math.PI / 6);
 
-const resonance1Mult = 1.000; //  2 zones x 6
-const resonance2Mult = 0.500; //  4 zones x 3
-const resonance3Mult = 0.333; //  6 zones x 2
-const resonance4Mult = 0.167; // 12 zones x 1
+const resonance1Mult = 0.167; //  2 zones x 6
+const resonance2Mult = 0.333; //  4 zones x 3
+const resonance3Mult = 0.500; //  6 zones x 2
+const resonance4Mult = 1.000; // 12 zones x 1
 const multTotal = resonance1Mult + resonance2Mult + resonance3Mult + resonance4Mult;
 
 // Total resonance between two colors
