@@ -1,4 +1,5 @@
-import { IColor } from './Magic.d';
+import { IColor, Transition, IKingdom, Dimension, Affinities } from './Magic.d';
+import { flatten } from 'ts-functional';
 
 // Orbital Notes
 
@@ -6,20 +7,49 @@ import { IColor } from './Magic.d';
 
 // --- BEGIN CONFIG -- //
 
-export const colors = [
-    {name: "Red",        kingdom: "",         vector: [1, 2, 2, 4], color: "#ff0000", stroke: "#880000"},
-    {name: "Vermillion", kingdom: "",         vector: [1, 2, 4, 2], color: "#ff4400", stroke: "#882200"},
-    {name: "Orange",     kingdom: "",         vector: [1, 4, 2, 2], color: "#ff8800", stroke: "#884400"},
-    {name: "Amber",      kingdom: "",         vector: [2, 1, 2, 4], color: "#ffbb00", stroke: "#886600"},
-    {name: "Yellow",     kingdom: "",         vector: [2, 1, 4, 2], color: "#ffff00", stroke: "#888800"},
-    {name: "Chartreuse", kingdom: "",         vector: [2, 2, 1, 4], color: "#88ff00", stroke: "#448800"},
-    {name: "Green",      kingdom: "",         vector: [2, 2, 4, 1], color: "#00ff00", stroke: "#008800"},
-    {name: "Teal",       kingdom: "",         vector: [2, 4, 1, 2], color: "#00ffff", stroke: "#008888"},
-    {name: "Blue",       kingdom: "Nidera",   vector: [2, 4, 2, 1], color: "#0000ff", stroke: "#000088"},
-    {name: "Violet",     kingdom: "",         vector: [4, 1, 2, 2], color: "#4400ff", stroke: "#220088"},
-    {name: "Purple",     kingdom: "",         vector: [4, 2, 1, 2], color: "#8800ff", stroke: "#440088"},
-    {name: "Magenta",    kingdom: "Saragosa", vector: [4, 2, 2, 1], color: "#ff00ff", stroke: "#880088"},
+export const colors:IKingdom[] = [
+    {name: "Red",        kingdom: "",         affinities: [1, 2, 2, 4], color: "#ff0000", stroke: "#880000"},
+    {name: "Vermillion", kingdom: "",         affinities: [1, 2, 4, 2], color: "#ff4400", stroke: "#882200"},
+    {name: "Orange",     kingdom: "",         affinities: [1, 4, 2, 2], color: "#ff8800", stroke: "#884400"},
+    {name: "Amber",      kingdom: "",         affinities: [2, 1, 2, 4], color: "#ffbb00", stroke: "#886600"},
+    {name: "Yellow",     kingdom: "",         affinities: [2, 1, 4, 2], color: "#ffff00", stroke: "#888800"},
+    {name: "Chartreuse", kingdom: "",         affinities: [2, 2, 1, 4], color: "#88ff00", stroke: "#448800"},
+    {name: "Green",      kingdom: "",         affinities: [2, 2, 4, 1], color: "#00ff00", stroke: "#008800"},
+    {name: "Teal",       kingdom: "",         affinities: [2, 4, 1, 2], color: "#00ffff", stroke: "#008888"},
+    {name: "Blue",       kingdom: "Nidera",   affinities: [2, 4, 2, 1], color: "#0000ff", stroke: "#000088"},
+    {name: "Violet",     kingdom: "",         affinities: [4, 1, 2, 2], color: "#4400ff", stroke: "#220088"},
+    {name: "Purple",     kingdom: "",         affinities: [4, 2, 1, 2], color: "#8800ff", stroke: "#440088"},
+    {name: "Magenta",    kingdom: "Saragosa", affinities: [4, 2, 2, 1], color: "#ff00ff", stroke: "#880088"},
 ];
+
+export const dimensions:Dimension[] = [
+    ["D1V1", "D1V2", "D1V3", "D1V4", "D1V5", "D1V6", "D1V7", "D1V8"],
+    ["D2V1", "D2V2", "D2V3", "D2V4", "D2V5", "D2V6", "D2V7", "D2V8"],
+    ["D3V1", "D3V2", "D3V3", "D3V4", "D3V5", "D3V6", "D3V7", "D3V8"],
+    ["D4V1", "D4V2", "D4V3", "D4V4", "D4V5", "D4V6", "D4V7", "D4V8"],
+];
+
+const transition = (d:number, o:number) => (s:number):Transition[] => [
+    [dimensions[d][s], dimensions[d][(s - o + dimensions[d].length) % dimensions[d].length]],
+    [dimensions[d][s], dimensions[d][(s + o + dimensions[d].length) % dimensions[d].length]]
+];
+
+const transitions = (d:number, o:number):Transition[] => flatten(
+    Object.keys(dimensions[d])
+        .map((s:string):number => parseInt(s))
+        .map(transition(d, o))
+);
+
+const baseTransitions = (a:Affinities):Transition[][] => a.map((aff:number, d) => transitions(d, aff));
+
+
+// [[A], [B]] x [[C], [D]] => [[A, C], [A, D], [B, C], [B, D]];
+
+const cross = (values1:string[][], values2:string[][]):string[][] => flatten(
+    values1.map((vals1:string[]) => values2.map((vals2:string[]) => [...vals1, ...vals2]))
+);
+
+
 
 export const harmonicValues = [
     // ["Increase", "Pull",    "Confront", "Decrease", "Push", "Avoid"],
@@ -101,6 +131,8 @@ export const resonance = (i1:number, i2:number) => {
         dot4 * resonance4Mult
     ) / multTotal;
 }
+
+    
 
 // Connection color between two circles
 export const color = (col:IColor, i1:number, i2:number) => {
