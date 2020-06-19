@@ -1,31 +1,39 @@
 import { IColor } from './Magic.d';
 
+// Orbital Notes
+
+
+
 // --- BEGIN CONFIG -- //
 
 export const colors = [
-    {name: "Red",        kingdom: "",         color: "#ff0000", stroke: "#880000"},
-    {name: "Vermillion", kingdom: "",         color: "#ff4400", stroke: "#882200"},
-    {name: "Orange",     kingdom: "",         color: "#ff8800", stroke: "#884400"},
-    {name: "Amber",      kingdom: "",         color: "#ffbb00", stroke: "#886600"},
-    {name: "Yellow",     kingdom: "",         color: "#ffff00", stroke: "#888800"},
-    {name: "Chartreuse", kingdom: "",         color: "#88ff00", stroke: "#448800"},
-    {name: "Green",      kingdom: "",         color: "#00ff00", stroke: "#008800"},
-    {name: "Teal",       kingdom: "",         color: "#00ffff", stroke: "#008888"},
-    {name: "Blue",       kingdom: "Nidera",   color: "#0000ff", stroke: "#000088"},
-    {name: "Violet",     kingdom: "",         color: "#4400ff", stroke: "#220088"},
-    {name: "Purple",     kingdom: "",         color: "#8800ff", stroke: "#440088"},
-    {name: "Magenta",    kingdom: "Saragosa", color: "#ff00ff", stroke: "#880088"},
+    {name: "Red",        kingdom: "",         vector: [1, 2, 2, 4], color: "#ff0000", stroke: "#880000"},
+    {name: "Vermillion", kingdom: "",         vector: [1, 2, 4, 2], color: "#ff4400", stroke: "#882200"},
+    {name: "Orange",     kingdom: "",         vector: [1, 4, 2, 2], color: "#ff8800", stroke: "#884400"},
+    {name: "Amber",      kingdom: "",         vector: [2, 1, 2, 4], color: "#ffbb00", stroke: "#886600"},
+    {name: "Yellow",     kingdom: "",         vector: [2, 1, 4, 2], color: "#ffff00", stroke: "#888800"},
+    {name: "Chartreuse", kingdom: "",         vector: [2, 2, 1, 4], color: "#88ff00", stroke: "#448800"},
+    {name: "Green",      kingdom: "",         vector: [2, 2, 4, 1], color: "#00ff00", stroke: "#008800"},
+    {name: "Teal",       kingdom: "",         vector: [2, 4, 1, 2], color: "#00ffff", stroke: "#008888"},
+    {name: "Blue",       kingdom: "Nidera",   vector: [2, 4, 2, 1], color: "#0000ff", stroke: "#000088"},
+    {name: "Violet",     kingdom: "",         vector: [4, 1, 2, 2], color: "#4400ff", stroke: "#220088"},
+    {name: "Purple",     kingdom: "",         vector: [4, 2, 1, 2], color: "#8800ff", stroke: "#440088"},
+    {name: "Magenta",    kingdom: "Saragosa", vector: [4, 2, 2, 1], color: "#ff00ff", stroke: "#880088"},
 ];
 
 export const harmonicValues = [
     // ["Increase", "Pull",    "Confront", "Decrease", "Push", "Avoid"],
     ["Water", "Earth", "Fire", "Wind", "Light", "Darkness"],
 
+    // ["Water", "Earth", "Fire", "Air", "Space", "Time"],
+    // ["Lift", "Gravity", "Thrust", "Drag", "Normal", "Shear"],
+
     // ["Water",    "Earth",   "Fire",     "Wind"],
     // ["War", "Famine", "Pestilence", "Death"],
     // ["Peace", "Bountifulness", "Health", "Life"],
     ["Knowledge", "Power", "Organization", "Perseverence"],
     // ["Form", "Purpose", "Material", "Agent"],
+    // ["Lift", "Gravity", "Thrust", "Drag"],
     
     ["Mind",     "Body",    "Spirit"],
     // ["Create",   "Destroy", "Maintain"],
@@ -33,12 +41,19 @@ export const harmonicValues = [
     // ["Id", "Ego", "Superego"],
     // ["Thoughts", "Words", "Deeds"],
     // ["Thought", "Emotion", "Movement"],
+    // ["Past" "Present" "Future"],
+    // ["Life", "Death", "Rebirth"],
     
     ["Order",    "Chaos"],
     // ["Life", "Death"],
+    // ["Growth", "Decay"],
+    // ["Existence", "Void"],
+    // ["Space", "Time"],
+    // ["Material", "Spiritual"],
+    // ["Near", "Far"],
     
     ["Life"],
-]
+];
 
 export const harmonics = [
     {level: 1, name: "Element",   width:5, offsets: [6],                                 color: {r:255, g:  0, b:  0}},
