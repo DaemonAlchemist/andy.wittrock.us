@@ -15,4 +15,7 @@ export declare interface IKingdom {
 export declare type Transition = [string, string];
 export declare type Spell = [Transition?, Transition?, Transition?, Transition?];
 export declare type Affinities = [number, number, number, number];
-export declare type Dimension = [string, string, string, string, string, string, string, string];
+export declare interface IDimension {
+    name: string;
+    values: [string, string, string, string, string, string, string, string];
+}

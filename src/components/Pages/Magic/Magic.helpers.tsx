@@ -1,5 +1,6 @@
-import { IColor, Transition, IKingdom, Dimension, Affinities } from './Magic.d';
-import { flatten } from 'ts-functional';
+import * as React from 'react';
+import { debug, flatten, range, switchOn } from 'ts-functional';
+import { Affinities, IColor, IDimension, IKingdom, Transition } from './Magic.d';
 
 // Orbital Notes
 
@@ -22,34 +23,39 @@ export const colors:IKingdom[] = [
     {name: "Magenta",    kingdom: "Saragosa", affinities: [4, 2, 2, 1], color: "#ff00ff", stroke: "#880088"},
 ];
 
-export const dimensions:Dimension[] = [
-    ["D1V1", "D1V2", "D1V3", "D1V4", "D1V5", "D1V6", "D1V7", "D1V8"],
-    ["D2V1", "D2V2", "D2V3", "D2V4", "D2V5", "D2V6", "D2V7", "D2V8"],
-    ["D3V1", "D3V2", "D3V3", "D3V4", "D3V5", "D3V6", "D3V7", "D3V8"],
-    ["D4V1", "D4V2", "D4V3", "D4V4", "D4V5", "D4V6", "D4V7", "D4V8"],
+export const dimensions:IDimension[] = [
+    {name: "Dim1", values: ["D1V1", "D1V2", "D1V3", "D1V4", "D1V5", "D1V6", "D1V7", "D1V8"]},
+    {name: "Dim2", values: ["D2V1", "D2V2", "D2V3", "D2V4", "D2V5", "D2V6", "D2V7", "D2V8"]},
+    {name: "Dim3", values: ["D3V1", "D3V2", "D3V3", "D3V4", "D3V5", "D3V6", "D3V7", "D3V8"]},
+    {name: "Dim4", values: ["D4V1", "D4V2", "D4V3", "D4V4", "D4V5", "D4V6", "D4V7", "D4V8"]},
 ];
 
-const transition = (d:number, o:number) => (s:number):Transition[] => [
-    [dimensions[d][s], dimensions[d][(s - o + dimensions[d].length) % dimensions[d].length]],
-    [dimensions[d][s], dimensions[d][(s + o + dimensions[d].length) % dimensions[d].length]]
-];
+export const transitionDescription = (start:string, end:string):JSX.Element | string | undefined => switchOn<JSX.Element | string>(`${start} -> ${end}`, {
+    "D1V1 -> D1V2": () => "Custom description",
+    default: () => <em>No description yet</em>,
+});
 
-const transitions = (d:number, o:number):Transition[] => flatten(
-    Object.keys(dimensions[d])
-        .map((s:string):number => parseInt(s))
+const transition = (d:IDimension, o:number) => (s:number):Transition[] =>flatten(debug(range(1, o)).map((i):Transition[] => i !== 4
+    ? [
+        [d.values[s], d.values[(s - i + d.values.length) % d.values.length]],
+        [d.values[s], d.values[(s + i + d.values.length) % d.values.length]]
+    ]
+    : [
+        [d.values[s], d.values[(s - i + d.values.length) % d.values.length]],
+    ]
+));
+
+export const transitions = (d:IDimension, o:number):Transition[] => flatten(
+    Object.keys(d.values)
+        .map((s:string):number => parseInt(s, 10))
         .map(transition(d, o))
 );
 
-const baseTransitions = (a:Affinities):Transition[][] => a.map((aff:number, d) => transitions(d, aff));
+export const baseTransitions = (a:Affinities):Transition[][] => a.map((aff:number, d) => transitions(dimensions[d], aff));
 
-
-// [[A], [B]] x [[C], [D]] => [[A, C], [A, D], [B, C], [B, D]];
-
-const cross = (values1:string[][], values2:string[][]):string[][] => flatten(
+export const cross = (values1:string[][], values2:string[][]):string[][] => flatten(
     values1.map((vals1:string[]) => values2.map((vals2:string[]) => [...vals1, ...vals2]))
 );
-
-
 
 export const harmonicValues = [
     // ["Increase", "Pull",    "Confront", "Decrease", "Push", "Avoid"],

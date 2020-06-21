@@ -41,10 +41,28 @@
 
 .spell-class {
     display: inline-block;
+    position: relative;
     white-space: nowrap;
     background-color: #dddddd;
     padding: 4px 8px;
     margin: 4px;
     border: solid 1px;
     border-radius: 16px;
+    .transition-tooltip {
+        display: none;
+    }
+    &:hover {
+        .transition-tooltip {
+            display: block;
+            position: absolute;
+            bottom: 50%;
+            left: 50%;
+            width: 400px;
+            background-color: #dddddd;
+            border: solid 1px;
+            z-index: 999;
+            border-radius: 8px;
+            padding: 8px;
+        }
+    }
 }

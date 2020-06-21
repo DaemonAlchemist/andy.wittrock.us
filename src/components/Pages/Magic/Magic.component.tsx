@@ -1,8 +1,10 @@
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import * as React from 'react';
 import { Circle, Layer, Stage } from 'react-konva';
 import { DropCap } from "../../DropCap";
 import { Connection } from './Connection';
-import { colors, config, getHarmonicValue, harmonics, resonance, x, y } from './Magic.helpers';
+import { colors, config, dimensions, getHarmonicValue, harmonics, resonance, transitionDescription, transitions, x, y } from './Magic.helpers';
 import "./Magic.less";
 
 const SpellClass = (props:{i:number, harmonics:number[]}) => <>
@@ -21,6 +23,7 @@ const MagicComponent = (props:IPageComponentProps) => {
     }, [ref.current]);
 
     const [selectedNode, setSelectedNode] = React.useState<number | undefined>(undefined);
+    const kingdom = !!selectedNode ? colors[selectedNode] : null;
     const selectNode = (i:number) => () => {
         setSelectedNode(i !== selectedNode ? i : undefined);
     }
@@ -58,17 +61,42 @@ const MagicComponent = (props:IPageComponentProps) => {
                     </>)}
                 </Layer>
             </Stage>
-            {selectedNode !== undefined && <>
+            {!!kingdom && selectedNode !== undefined && <>
                 <h2>
                     <span style={{
-                        backgroundColor: colors[selectedNode].color,
+                        backgroundColor: kingdom.color,
                         display: "inline-block",
                         height: "16px",
                         marginRight: "8px",
                         width: "16px",
                     }} />
-                    {colors[selectedNode].kingdom || <>{colors[selectedNode].name} Kingdom</>}
+                    {kingdom.kingdom || <>{kingdom.name} Kingdom</>}
                 </h2>
+
+                <table className="data-table dimension-table">
+                    <thead>
+                        <tr>
+                            <th>Dimension</th>
+                            <th>Transitions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {dimensions.map((d, i) =>
+                            <tr key={i}>
+                                <td>{d.name} ({transitions(d, kingdom.affinities[i]).length})</td>
+                                <td>{transitions(d, kingdom.affinities[i]).map((t, j) =>
+                                    <span key={j} className="spell-class">
+                                        {t[0]} <FontAwesomeIcon icon={faArrowRight} /> {t[1]}
+                                        <div className="transition-tooltip">
+                                            {transitionDescription(t[0], t[1])}
+                                        </div>
+                                    </span>
+                                )}</td>
+                            </tr>
+                        )}
+                    </tbody>
+                </table>
+
                 <table className="data-table info-table">
                     <thead>
                         <tr>
