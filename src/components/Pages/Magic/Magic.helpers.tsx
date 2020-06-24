@@ -23,6 +23,55 @@ export const colors:IKingdom[] = [
     {name: "Magenta",    kingdom: "Saragosa", affinities: [4, 2, 2, 1], color: "#ff00ff", stroke: "#880088"},
 ];
 
+/* New theory:
+    - 4 dimensions of 3 orthogonal axes
+    - Kingdom affinities (1, 2, or 3) determine how many axes in a dimension can be used in a single spell
+    - An Ashtar power level has two parts: A/B
+        - A indicating how many dimensions they have access to.
+        - B indicating how many dimensions they can utilize in a single spell
+        - 1/1, 2/1, 2/2, 3/1, 3/2, 3/3, 4/1, 4/2, 4/3, 4/4
+*/
+// Energy Actions:    diffract,  reflect,    scatter,  focus, emit,      absorb
+// Substance Actions: create,    destroy,    find,     hide,  push,      pull
+// Soul Actions:      connect,   disconnect, heal,     harm,  influence, free
+// Thought Actions:   read, influence, know, forget, 
+
+// -------------------------------------------
+
+// Matter Dimension: perform an action on a physical objectt
+// Types:   water,     air,     earth,    fire,       animal,      plant,       mineral,    void
+// Actions: create,    destroy, maintain, find,       lift,        push,        pull,       hide
+
+// Energy Dimension: perform an action on an energy attribute
+// Types:   frequency, density, power,    charge,     velocity,    location,    viscosity, 
+// Actions: diffract,  reflect, scatter,  focus,      emit,       absorb
+
+// Thought Dimension
+// Types:   memories,  desires, emotions, intentions, fears,       connections, sensations, actions
+// Actions: sense,     stop,    start,    control,    hide,        create,      destroy,    maintain
+
+// 
+
+// action, reaction, amplitude, balance, force, frequency, catalyst, bond, cold, heat, energy,
+// compound, atomic, mass, conservation, creation, destruction, decompose, density, diffract, reflect, absorb, scatter, focus,
+// concentrate, dilute, entropy, power, erode, torque, evaporate, freeze, thaw, condense, friction, gravity, lift, thrust,
+// drag, ice, water, earth, lava, plasma, gas, air, fire, space, time, void, past, present, future, inertia, light, darkness,
+// motion, neutral, positive, negative, particle, wave, precipitate, pressure, recessive, dominant, 
+// transition, metal, vapor, vibration, viscosity, vortex, wave, wedge, wheel, wind, Acid, Alkali, allele, cycle
+// speed, velocity, acceleration, location, annihilate, 
+
+// Dimension verbs:  transform, combine, difference, add, amplify
+
+// Elements: water/fire, air/earth, space/time void/energy
+
+
+// States: solid, liquid, gas, plasma,
+// States of energy:  potential, kinetic, life, death, static, moving, 
+// Transitions: evaporate, freeze, thaw, melt, condense, precipitate, dilute, concentrate, create, destroy, decompose, diffract
+// Attributes: speed, velocity, acceleration, location, torque, viscosity
+// Abstract things: vortex, wave, particle
+
+
 export const dimensions:IDimension[] = [
     {name: "Dim1", values: ["D1V1", "D1V2", "D1V3", "D1V4", "D1V5", "D1V6", "D1V7", "D1V8"]},
     {name: "Dim2", values: ["D2V1", "D2V2", "D2V3", "D2V4", "D2V5", "D2V6", "D2V7", "D2V8"]},
@@ -58,8 +107,8 @@ export const cross = (values1:string[][], values2:string[][]):string[][] => flat
 );
 
 export const harmonicValues = [
-    // ["Increase", "Pull",    "Confront", "Decrease", "Push", "Avoid"],
-    ["Water", "Earth", "Fire", "Wind", "Light", "Darkness"],
+    ["Increase", "Pull",    "Confront", "Decrease", "Push", "Avoid"],
+    // ["Water", "Earth", "Fire", "Wind", "Light", "Darkness"],
 
     // ["Water", "Earth", "Fire", "Air", "Space", "Time"],
     // ["Lift", "Gravity", "Thrust", "Drag", "Normal", "Shear"],
@@ -67,12 +116,13 @@ export const harmonicValues = [
     // ["Water",    "Earth",   "Fire",     "Wind"],
     // ["War", "Famine", "Pestilence", "Death"],
     // ["Peace", "Bountifulness", "Health", "Life"],
-    ["Knowledge", "Power", "Organization", "Perseverence"],
+    // ["Knowledge", "Power", "Organization", "Perseverence"],
+    ["Learn", "Control", "Organize", "Build"],
     // ["Form", "Purpose", "Material", "Agent"],
     // ["Lift", "Gravity", "Thrust", "Drag"],
     
-    ["Mind",     "Body",    "Spirit"],
-    // ["Create",   "Destroy", "Maintain"],
+    // ["Mind",     "Body",    "Spirit"],
+    ["Create",   "Destroy", "Maintain"],
     // ["Compassion", "Simplicity", "Humility"],
     // ["Id", "Ego", "Superego"],
     // ["Thoughts", "Words", "Deeds"],
@@ -80,9 +130,9 @@ export const harmonicValues = [
     // ["Past" "Present" "Future"],
     // ["Life", "Death", "Rebirth"],
     
-    ["Order",    "Chaos"],
+    // ["Order",    "Chaos"],
     // ["Life", "Death"],
-    // ["Growth", "Decay"],
+    ["Grow", "Decay"],
     // ["Existence", "Void"],
     // ["Space", "Time"],
     // ["Material", "Spiritual"],
