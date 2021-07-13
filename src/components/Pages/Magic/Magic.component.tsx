@@ -212,7 +212,7 @@ const MagicComponent = (props:IPageComponentProps) => {
 
 export const magic:IPage = {
     Component: MagicComponent,
-    listed: true,
+    listed: false,
     published: "2020-06-13",
     tags: [],
     title: "Magic",

@@ -9,7 +9,9 @@ import { minecraftToMaxPart3 } from '../../components/Pages/MinecraftToMaxPart_3
 import { prematureOptimization } from '../../components/Pages/PrematureOptimization';
 import { proceduralLandscapes } from '../../components/Pages/ProceduralLandscapes';
 import { projects } from "../../components/Pages/Projects";
+import { reduxVsUnstateless } from '../../components/Pages/ReduxVsUnstateless';
 import { resume } from "../../components/Pages/Resume";
+import { wormholes } from '../../components/Pages/Wormholes';
 
 export const config:IConfig = {
     menu: {
@@ -19,7 +21,7 @@ export const config:IConfig = {
         ],
         pageCount:5,
         pageSpread:1,
-        tags: ["Minecraft", "C++", "Front End", "3D Graphics", "Algorithms", "Procedural Content", "Utilities"]
+        tags: ["Minecraft", "C++", "Front End", "3D Graphics", "Algorithms", "Procedural Content", "Utilities", "Physics", "Writing"]
     },
     pages: [
         // HYGEN_PAGE_INJECT
@@ -33,6 +35,8 @@ export const config:IConfig = {
         proceduralLandscapes,
         prematureOptimization,
         resume,
+        wormholes,
+        reduxVsUnstateless,
     ],
     site: {
         author: "Andrew Wittrock",

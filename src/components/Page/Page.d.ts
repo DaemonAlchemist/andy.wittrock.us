@@ -1,4 +1,4 @@
-type Tag = "Minecraft" | "C++" | "Front End" | "3D Graphics" | "Algorithms" | "Procedural Content" | "Utilities";
+type Tag = "Minecraft" | "C++" | "Front End" | "3D Graphics" | "Algorithms" | "Procedural Content" | "Utilities" | "Physics" | "Writing";
 
 interface IPageProps {
     children?:any;
