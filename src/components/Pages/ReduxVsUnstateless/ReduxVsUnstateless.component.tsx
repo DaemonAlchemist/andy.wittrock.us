@@ -4,9 +4,9 @@ import { DropCap } from "../../DropCap";
 
 const ReduxVsUnstatelessComponent = (props:IPageComponentProps) =>
     <>
-        <p><DropCap preview={props.preview}>R</DropCap>ecently, I wrote <a href="https://www.npmjs.com/package/unstateless">Unstateless</a>, a new state management library for React as an alternative to other libraries such as <a href="https://redux.js.org/">Redux</a>.  This library grew out of another project where I was doing something "clever" with Redux.  That "cleverness" meant that I needed a non-Redux method for storing some shared state.  I cobbled something together that worked, and once it reached a sufficiently stable state, I extracted it into a separate package.</p>
+        <p><DropCap preview={props.preview}>R</DropCap>ecently, I wrote <a href="https://www.npmjs.com/package/unstateless">Unstateless</a>, a state management library for React.  This library grew out of another project where I was doing something "clever" with <a href="https://redux.js.org/">Redux</a>.  That "cleverness" meant that I needed an alternate method for storing some shared state.  I cobbled something together that worked and refined it as the project went on.  Once it reached a sufficiently well-defined state, I extracted it into a separate package.</p>
         
-        <p>One key feature of Unstateless that makes it nice to use instead of Redux is a drastic reduction in boilerplate coding.  As a demonstration, here is an example of how much time and effort can be saved by using Unstateless rather than Redux.</p>
+        <p>One key feature of Unstateless is a drastic reduction in boilerplate coding as compared to other libraries such as Redux.  As a demonstration, let's convert a local state variable into a global state variable using both Redux and Unstateless.</p>
 
         {!props.preview && <>
             <h2>Original Code</h2>
@@ -27,7 +27,7 @@ export const SomeComponent = (props:any) => {
 }`
             }</CodeBlock>
 
-            <p>This is a pretty basic component, but demonstrates the usual way of storing local state using React hooks.  Now let's say that you want to hoist this username into a global state so that it's available to other components.  First, we'll do it with Redux.</p>
+            <p>This is a pretty basic component, but demonstrates how React hooks can be used to store local state.  Now let's say that you want to share this username with other components.  First, we'll try with Redux.</p>
 
             <h2>Redux</h2>
 
@@ -57,7 +57,7 @@ export const updateUserName = (userName:string):IUserNameAction =>
     ({type: "USERNAME_UPDATE", userName});`
             }</CodeBlock>
 
-            <p>Next, we'll need to write the react-redux boilerplate that allows us to connect our component to the Redux data store:</p>
+            <p>Next, we'll need to write the react-redux boilerplate to connect our original component to the Redux data store:</p>
 
             <CodeBlock>{
 `import {getUserName, updateUserName} from "username-redux";
@@ -84,7 +84,7 @@ export const SomeComponent = connect(mapStateToProps, mapDispatchToProps)(SomeCo
 `
             }</CodeBlock>
 
-            <p>And lastly, if this is our first use of Redux in a project, we'll need to add the Redux provider boilerplate to our top-level component:</p>
+            <p>And lastly, if this is our first use of Redux in a project, we'll need to add the Redux provider boilerplate to our top-level app component:</p>
 
             <CodeBlock>{
 `// App.tsx
@@ -132,7 +132,7 @@ export const SomeComponent = (props:any) => {
 }`
             }</CodeBlock>
 
-            <p>And that's it.  The only thing we needed to do is convert the standard useState React hook into a useSharedState hook from Unstateless.  Optionally, if you want your components to be completely stateless, you can use the inject and mergeProps functions to inject the state instead:</p>
+            <p>And that's it.  No boilerplate code.  No top-level context providers.  We just converted the useState React hook into a useSharedState hook from Unstateless.  Optionally, if you want your components to be completely stateless, you can use the inject and mergeProps functions to inject the state instead:</p>
 
             <CodeBlock>{
 `import {inject, mergeProps, useSharedState} from "unstateless";
@@ -159,7 +159,9 @@ export const SomeComponent = connect(SomeComp);
 `
             }</CodeBlock>
 
-            <p>This is a bit more code than the basic Unstateless example, but the big advantage here is that the code is still all local to the component.  There is no top-level boilerplate in the App, which allows you to use Unstateless seemlessly in any React app.</p>
+            <p>This is a bit more code than the basic Unstateless example.  However, the code is still all local to the component.  There is no top-level boilerplate code to worry about.</p>
+
+            <p>I've already built one additional project that uses Unstateless for state management, and found it much more intuitive than Redux.  I've also converted some existing components in other projects from Redux to Unstateless, and found noticable performance improvements.  Unstateless still needs more battle-testing, but I've been pleased with it so far.</p>
         </>}
     </>;
 
