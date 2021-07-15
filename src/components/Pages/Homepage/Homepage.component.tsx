@@ -9,7 +9,7 @@ export const homepage:IPage = {
     listed: false,
     published: "",
     tags: [],
-    title: "andy.wittrock.us",
+    title: "Andrew Wittrock",
     updated: "",            
     url: "/",
 };

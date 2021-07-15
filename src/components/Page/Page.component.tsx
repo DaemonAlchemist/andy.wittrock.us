@@ -1,10 +1,13 @@
 import * as React from 'react';
+import DocumentTitle from 'react-document-title';
 import { Link } from 'react-router-dom';
+import { config } from "../../libs/config";
 import { Date } from "../Date";
 import { NavLinks } from '../NavLinks';
 
 export const PageComponent = (props:IPageProps) =>
     <div className="page">
+        <DocumentTitle title={`${props.title} - ${config.site.title}`} />
         <div className="left-blocker blocker" />
         <div className="right-blocker blocker" />
         <h1 className="stuck top" title={props.title}>{props.title}</h1>
