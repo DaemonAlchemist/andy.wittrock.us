@@ -32,7 +32,7 @@ const PrematureOptimizationComponent = (props:IPageComponentProps) =>
 
             <p>Given the complex nature of the weld algorithm, I wasn't surprised when it was somewhat slow.  After being annoyed with it for several months, I found the time to go back and try to optimize it.  Initially, I guessed that the algorithm I was using was simply inefficient, and needed to be redesigned from scratch to be more efficient.  However, before I invested my time in a massive rewrite, I ran the code through the a code profiler to see where the bottlenecks were.</p>
 
-            <h2>Nothing can stop us now</h2>
+            <h2>The Importance of Profiling</h2>
 
             <p>As it turns out, my guess was completely wrong!  The actual bottleneck was in a place that I would have never guessed.  In the code that implemented a breadth-first search of the graph, I needed a way to track which vertices had been accessed, so I initializing a boolean array filled with false.  This array had one entry for each vertex in the graph, and the entry was set to true when the vertex was visited.  Unfortunately, this array was initialized every time a new breadth-first search was started.  Since the weld graph was very sparse (almost all subgraphs consisted of two or less vertices), this happened a huge number of times.  Almost 90% of the running time was taken up with initializing an empty variable!  When I replaced the array with an empty set of vertices which was given a new entry whenever a vertex was visited, the running time dropped immensely.</p>
 
