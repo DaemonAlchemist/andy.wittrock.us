@@ -119,8 +119,9 @@ const ProjectsComponent = (props:IPageComponentProps) =>
                 languages={["Typscript", "C++"]}
                 url="https://github.com/DaemonAlchemist"
              >
-                I am also the creator of several useful libraries, including:
+                I am also the author of several useful libraries, including:
                 <ul>
+                    <li><a href="https://www.npmjs.com/package/unstateless">unstateless</a>:  A state management library for React.</li>
                     <li><a href="https://www.npmjs.com/package/the-reducer">the-reducer</a>:  A fully typed Redux reducer creator for relational data.</li>
                     <li><a href="https://www.npmjs.com/package/ts-functional">ts-functional</a>:  A library of useful functional programming utilities.</li>
                     <li><a href="https://www.npmjs.com/package/react-flicker">react-flicker</a>:  For when the <Blink>blink tag</Blink> is <Flicker>not</Flicker> <Jitter>annoying</Jitter> <Jitter count={3}><Flicker>enough</Flicker></Jitter>.</li>
@@ -136,6 +137,6 @@ export const projects:IPage = {
     published: "2020-04-16",
     tags: [],
     title: "Projects",
-    updated: "",            
+    updated: "2021-07-15",            
     url: "/projects",
 };
